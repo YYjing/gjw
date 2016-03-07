@@ -1,0 +1,84 @@
+.footer{
+
+}
+.footerAd{
+	display: block;
+	width: 100%;
+	height: 80px;
+	background-position: center center;
+	background-repeat: no-repeat;
+
+}
+.footerMid{
+	height: 343px;
+	background: url(../images/footer_Bg.gif) repeat;
+	box-shadow: inset 0 1px 3px rgba(0,0,0,0.7);
+}
+.footer_tel{
+	margin-top: 20px;
+	width: 301px;
+	height: 75px;
+	background: url(../images/tel.png) no-repeat left top;
+}
+.footer_serv{
+	 margin: 61px 0 0 30px;;
+}
+.footer_center{
+	margin: 0 auto;
+	width: 1150px;
+}
+.footerMid_t{
+	
+	padding-top: 7px;
+	width: 1150px;
+	height: 113px;
+	border-bottom: 2px solid #787878;
+}
+.footer_link{ margin-top: 40px;}
+.footer_link dl{
+	float: left;
+	width: 170px;
+	+width:158px;
+}
+.footer_link dt{
+	margin-bottom: 10px;
+	font-size: 14px;
+	color: #fff;
+	font-weight: bold;
+}
+.footer_link a{
+	line-height: 24px;
+	color: #a9a9a9;	
+}
+.firstDl{ margin-left: 100px;}
+.footer_link a.yellow{ color:#ffd312; }
+.qrCodeBox p{margin-right: 20px; margin-top: 15px; text-align: right; color: #fff; }
+.qrCode{ margin-left: }
+.copyright{
+	padding-top: 83px;
+	background: url(../images/baozheng_06.jpg) no-repeat center top; 
+	line-height: 24px;
+	text-align: center;
+	overflow: hidden;
+}
+.authentication{
+	margin-top: 10px;
+}
+.footer_qrCode{ width:104px;height:104px;}
+.authentication a {
+	display: inline-block;
+	width: 110px;
+	height: 48px;
+	background: url(../images/aut_06.jpg) no-repeat;
+}
+.authentication a.depart{
+	margin-left: 10px;
+	background-position: -120px 0;
+}
+.frendLinkBox{ position:relative;height: 32px; overflow: hidden;}
+.friendLinkList{ width:1200px; position: absolute;left: 0 ; top:0;}
+.friendLinkList a{ display: inline-block;margin: 0 10px;}
+.friendLinkList li{
+	height: 32px;
+	line-height: 32px;
+}

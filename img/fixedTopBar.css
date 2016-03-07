@@ -1,0 +1,685 @@
+/*----顶部通栏s------*/
+	.fixedTopBar_box{
+		width:100%;
+		height: 31px;
+		line-height: 30px;
+		font-size: 12px; 
+		color: #656565;
+		z-index: 9999;
+	}
+	.fixedTopBar_fixeBar_inner{
+		width: 100%;
+		max-width: 1200px;
+		_width:1200px;
+		margin: 0 auto;
+		min-width: 762px;
+	}
+	.fixedTopBar_box a{
+		color: #656565;
+	}
+	.fixedTopBar_box .focus_us{
+		position: relative;
+		padding: 0 5px;
+		line-height: 30px;
+		font-size: 12px; 
+	}
+	.focus_us:hover{ background: #fff; color: #c40000;}
+	.31xiala{ -webkit-transition:all 0.4s;}
+	/* .focus_us:hover  */.31xiala{ -webkit-transform:rotateX(180deg);}
+	.fixedTopBar_box .erweima{
+		font-size: 14px;
+		margin-right: 5px;
+	}
+	
+	.hoverQrCode{
+		display: none;
+		z-index: 999999999;
+		position: absolute;
+		top: 36px;
+		left: 0;
+		background: #fff;
+		width:200px;
+		height: 200px;
+		padding: 4px;
+		box-shadow: 0 0 3px rgba(0,0,0,0.6);
+	}
+	.qrCodeArr.tips_arrow{
+		left: 5px;
+		top: -5px;
+		color: #fff;
+	}
+	.hoverQrCode img{
+		width: 200px;
+		height: 200px;
+	}
+	.fixedTopBar_fixeBar{
+		position: static;
+		left: 0;
+		top: 0;
+		width:100%;
+		height: 31px;
+		background: #f7f7f7;
+		bottom:1px solid #eee;
+	}
+	.loginReg{
+		margin-right: 17px;
+	}
+	.fixedTopBar_option li{
+		float: left;
+	}
+	.fixedTopBar_option .line{
+		margin-top: 9px;
+		height: 12px;
+		width: 1px;
+		background: #ddd;
+	}
+	.fixedTopBar_option .force{
+		margin: 0 3px;
+		text-align: center;
+		cursor: pointer;
+	}
+	.force .force_link{
+		padding: 0 20px
+	}
+	.force a.force_link_active{ color: #c40000;}
+	.force a:hover{ color: #c40000;}
+    .focus_us .iconfont, .fixedTopBar_option .iconfont {
+        display: inline-block;
+        font-size: 8px;
+        -webkit-transition: all 0.2s ease-out;
+        -ms-transition: all 0.2s ease-out;
+        -moz-transition: all 0.2s ease-out;
+        -o-transition: all 0.2s ease-out;
+        transition: all 0.2s ease-out;
+    }
+    .focus_us :hover .iconfont
+	,.fixedTopBar_dropList li:hover .iconfont{
+		-webkit-transform:rotate(180deg);
+		-moz-transform:rotate(180deg);
+		-ms-transform:rotate(180deg);
+		-o-transform:rotate(180deg);
+		transform:rotate(180deg);
+	}
+	.loginReg a
+	{
+	    float:none;
+		display: inline-block;
+		margin: 0 3px;
+		color: #0066cb;
+	}
+	.fixedTopBar_dropList{
+		position: absolute;
+		left: 0;
+		top: 0;
+		padding: 0 16px;
+		z-index: 999;
+		line-height: 30px;
+		overflow: hidden;
+	}
+	.fixedTopBar_dropBox { 
+		position: relative;
+		width: 95px;
+		height: 30px;
+	}
+	.fixedTopBar_dropList li{
+		float: none;
+	}
+	.fixedTopBar_dropList a{
+		line-height: 30px;
+		white-space: nowrap;
+	}
+	.fixedTopBar_dropList:hover{
+		padding: 0 15px;
+		border: 1px solid #ddd;
+		border-top:none;
+		background: #fff;
+	}
+	.fixedTopBar_dropList:hover .fixedTopBar_dropDown{
+		display: block;
+		z-index: 99999;
+	}
+	.fixedTopBar_dropDown{
+		display: none;
+		/* background: #fff; */
+	}
+	.fixedTop{
+		position: fixed;
+		left: 0;
+		top: 0;
+	}
+	.dianhua1.telIcon{
+		font-size: 16px;
+	}
+	.force_link.telNum{ font-size: 16px; font-style: italic;}
+	.telNum .telIcon{ font-size: 20px;}
+/*----顶部通栏s------*/
+
+/*--悬浮搜索s---*/
+	.fixedSch_box{
+		_display: none;
+        position: fixed;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        overflow: hidden;
+        background: rgba(221,39,39,0.95);
+        background: #c40000 \9;
+        -webkit-transition: top 0.6s ease-out;
+        -ms-transition: top 0.6s ease-out;
+        -moz-transition: top 0.6s ease-out;
+        -o-transition: top 0.6s ease-out;
+        transition: top 0.6s ease-out;
+        box-shadow: 0 0 2px rgba(255,255,255,0.7);
+        z-index: 10000;
+	}
+	.fixedSch_logo img{
+		margin: 5px 0 0 0px;
+        height: 40px;
+	}
+	.fixedSch_schBox{
+		margin: 9px 0 0 60px;
+        width: 660px;
+        height: 32px;
+        background: #fff;
+		
+	}
+	.fixedSch_schBtn{
+		width: 70px;
+        height: 32px;
+        background: #cf000d;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        font-family: "Microsoft Yahei";
+        cursor:pointer;
+	}
+	.fixedSch_txt{
+		width: 588px;
+		height: 32px;
+		border: none;
+		text-indent: 10px;
+		line-height: 32px;
+	}
+	.fixedSch_txt:focus,
+	.fixedSch_schBtn:focus{
+		outline: none;
+	}
+/*--悬浮搜索e---*/
+
+
+/*--topBar--s-*/
+    .topBar.mid_box{ background:transparent; border:none;}
+	.topBar{
+	  padding: 10px 0;	
+	  height: 90px;
+	}
+	.topBar_logo{
+		margin-top: 26px;
+	}
+	.topBar_gif {
+        margin: 20px 0 0 20px;
+        width: 142px;
+        height: 67px;
+    }
+	.topBar_searchBox {
+        width: 540px;
+        margin: 24px 0 0 50px;
+    }
+	.topBar_searchTxt{
+		width: 448px;
+		height: 33px;
+		line-height: 33px;
+		text-indent: 10px;
+		border: 3px solid #c40000;
+		font-size: 14px;
+	}
+	.topBar_searchBtn{
+		width: 86px;
+		height: 39px;
+		background: #c40000;
+		color: #fff;
+		text-align: center;
+		line-height: 39px;
+		border: none;
+		cursor: pointer;
+		font-size: 16px;
+        font-family: "Microsoft Yahei";
+	}
+	.topBar_searchTxt:focus,
+	.topBar_searchBtn:focus{
+		outline: none;
+	}
+	.topBar_tags a{
+		float: left;
+		margin-top: 8px;
+		padding:0 8px;
+		font-size: 12px;
+		
+		border-right:1px solid #ccc; 
+	}
+	.topBar_tags a:hover{
+		color: #c40000;
+	}
+	.topBar_cart{
+		position: relative;
+		margin-top: 24px;
+	}
+
+	
+	/*-----购物车s-----*/
+	.topBar_cartBtn{
+		position: relative;
+		width: 139px;
+		height: 34px;
+		background: #f9f9f9;
+		border:1px solid #dfdfdf;
+		text-align: center;
+		line-height: 34px;
+	}
+	.topBar_cart:hover .topBar_cartBtn,
+	.topBar_dropBox 
+	{
+		box-shadow: 0 0 3px rgba(0,0,0,0.3);
+	}
+	.arrow{
+		font: 400 13px/13px simsun;
+	}
+	.topBar_count{
+		position: absolute;
+		top: -4px;
+		left: 104px;
+		display: inline-block;
+		padding: 1px 2px;
+		font-size: 12px;
+		line-height: 12px;
+		color: #fff;
+		background-color: #c40000;
+		border-radius: 7px 7px 7px 0;
+		min-width: 12px;
+		text-align: center;
+		
+	}
+	
+	.whiteSpacer{
+		position: absolute;
+		width: 139px;
+		height: 5px;
+		right: 0px;
+		top: -3px;
+		background: #fff;
+		z-index: 999;
+	}
+	
+	.topBar_dropBox{
+		display: none;
+		position: absolute;
+		top: 35px;
+		right: 0px;
+		width: 308px;
+		background: #fff;
+		border: 1px solid #dfdfdf;
+		z-index: 98;
+	}
+	.topBar_dropList{
+		max-height: 296px;
+		_height:296px;
+		overflow: auto;
+		background: #fff;
+	}
+	.topBar_smt{
+		padding:0 10px;
+		color: #222;
+		font-weight: bold;
+		line-height: 30px;
+	}
+	
+	.topBar_dropList li{
+		overflow: hidden;
+		padding:8px 10px;
+		height: 58px;
+		border-bottom: 1px dotted #ddd;
+		_margin-bottom: 0;
+	}
+	.topBar_dropBox li:hover{
+		background: #F5F5F5;
+
+	}
+	.topBar_dropBox li img{
+		width: 50px;
+		height: 50px;
+		border: 1px solid #ddd;
+	}
+	.topBar_goodsName{
+		margin-left: 10px;
+		width: 150px;
+		max-height:54px;
+		overflow:hidden;
+	}
+	.topBar_delete{
+		margin-top: 10px;
+		cursor:pointer;
+	}
+	a.topBar_cartLink{
+		height: 29px;
+		padding: 0 10px;
+		background: #E4393C;
+		color: #fff;
+		text-align: center;
+		font-weight: 700;
+		line-height: 29px;
+		border-radius: 3px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+	}
+	.topBar_smb{
+		padding: 8px;
+		background: #f5f5f5;
+		_height:29px;
+		line-height: 29px;
+		overflow: hidden;
+	}
+	.topBar_price{ text-align: right;}
+	.topBar_noPro{
+		padding: 20px;
+	}
+	.topBar_noPro .emptyCart{ font-size: 40px; color: #c40000;}
+	/*-----购物车s-----*/
+/*--topBar--e-*/
+
+/*-----导航栏s-----*/
+	.v6_navBar{
+		margin-top: 10px;
+		height: 37px;
+	}
+	.navBar_dt,
+	.navBar_items
+	{
+		font-size: 16px;
+		text-align:center;
+		line-height: 37px;
+	}
+	.navBar_dt{
+		width: 210px;
+		height: 37px;
+		background: #ba000c;
+		color: #fff;
+		font-family: "Microsoft Yahei";
+		font-weight: 500;
+	}
+	.navBar_items li{
+		position: relative;
+		float: left;
+		padding:0 24px;
+		font-weight: bold;
+		font-family: "Microsoft Yahei";
+	}
+	.navBar_items a.active{
+		color: #c40000;
+	}
+	.navBar_items a:hover{
+		color: #c40000;
+	}
+	.navBar_tip{
+		 display: inline-block;
+		  border-radius: 5px;
+		  padding: 2px 3px;
+		  background: #390004;
+		  color: #c81623;
+		  line-height: 10px;
+		  font-weight: normal;
+		  font-size: 10px;
+		  -webkit-transform:scale(0.6);
+		  -ms-transform:scale(0.6);
+		  -moz-transform:scale(0.6);
+		  -o-transform:scale(0.6);
+		  transform:scale(0.6);
+	}
+	.navBar_items .navBar_tip{
+		    position: absolute;
+            right: -1px;
+            top: 0px;
+	}
+	.navBar_cateItem.hover .navBar_tip,
+	.navBar_tip.cur{
+		color: #fff;
+		background: #c40000;
+	}
+	.navBar_act img{
+		height: 37px;
+		width: auto;
+	}
+	/*-----二级导航s------*/
+		.v6_navBar_cate{
+			position: relative;
+		}
+		.navBar_cate .navBar_tip{
+
+		}
+		.navBar_navTab{
+			position: absolute;
+			top:37px;
+			left: 0;
+			width: 210px;
+			height: 452px;
+			padding-top: 3px;
+			background: #c81623;
+			z-index: 999;
+		}
+		.cateItem_title{
+			display: block;
+			+padding-top:5px;
+			height: 24px;
+			line-height: 24px;
+			font-size: 14px;
+		}
+		.navBar_cateItem .arrow{
+			margin-top: 3px;
+			_margin-top: 5px;
+		}
+		.navBar_title{ height: 24px; line-height: 24px; font-family: "Microsoft Yahei";}
+		.navBar_linkBox{ margin-top: 3px;}
+		.navBar_cateItem{
+			padding:5px 10px 7px 10px;
+			padding:3px 10px 8px 10px\9\0;
+			color: #fff;
+			line-height: 22px;
+		}
+		.navBar_cateItem a {
+			display: inline-block;
+            white-space: nowrap;
+            margin: 0 4px 0 0;
+            padding: 0 3px;
+            line-height: 16px;
+            color: #fff;
+		}
+
+
+
+		/*鼠标悬停样式*/
+		.itemTab{
+			position: relative;
+			+position: static;
+		}
+		.navBar_cateItem.hover{
+			background: #fff;
+			color: #333;
+		}
+		.navBar_cateItem.hover a
+		{
+			color: #333;
+		}
+		
+		.itemTab.hover a:hover{
+			color: #c40000;
+		}
+		.navBar_navTabInner .witheSq{
+			display: none;
+			position: absolute;
+			right: -3px;
+			top: 0;
+			background: #fff;
+			width: 10px;
+			height: 100%;
+			z-index: 9;
+		}
+		.itemTab.hover .witheSq{
+			display: block;
+			+display: none;
+			z-index: 1000;
+		}
+		/*鼠标悬停样式*/
+		/*弹出层*/
+		.navBar_subNavBox{
+
+		}
+		.navBar_subNav{
+			display: none;
+			position: absolute;
+			left: 210px;
+		  	top: 2px;
+		  	+top:5px;
+		  	overflow: hidden;
+			width: 989px;
+			height: 451px;
+			background: #fff;
+			border: 1px solid #c40000;
+			border-left:none;
+			z-index: 900;
+		}
+		.brands_more{ font:400 12px/24px consolas;}
+		.navBar_leftSubNav{
+			width: 754px;
+			height: 451px;
+			border-right:1px solid #ddd;
+		}
+		.navBar_leftInner{
+			padding: 20px 30px;
+		}
+		.navBar_chns{ overflow: hidden;}
+		.navBar_chns a{
+			float: left;
+			display: inline-block;
+			padding: 0 0 0 8px;
+			margin-right: 10px;
+			line-height: 24px;
+			background: #7C7171;
+			color: #fff;
+			white-space: nowrap;
+		}
+		.navBar_chns a:hover{
+			background: #C81623;
+		}
+		.navBar_chns i{
+			display: inline-block;
+			margin-left: 8px;
+			width: 23px;
+			height: 24px;
+			font: 400 9px/24px consolas;
+			background: #5c5251;
+			text-align: center;
+			cursor: pointer;
+		}
+		.navBar_chns a:hover i{ background: #B1191A;}
+		.navBar_brands{ width: 100%; overflow: hidden; }
+		.navBar_bTitle{ 
+			margin-top: 10px;
+			border-bottom: 2px solid #000;
+			line-height: 26px;
+			color: #000;
+		}
+		.navBar_brandList { margin-top: 10px; overflow: hidden;}
+		.navBar_brandList li{
+			float: left;
+			width: 77px;
+			white-space: nowrap;
+			text-align: left;
+			line-height: 24px;
+			overflow: hidden;
+			text-overflow:ellipsis;
+		}
+		.navBar_brandList a:hover{ color: #c40000;}
+		.navBar_brandsL{ width: 463px;}
+		.navbar_brandR{ width: 230px;}
+		.navbar_brandR li{ width: 33.3%;+width: 33%;}
+		
+		.navBar_rightSubNav{
+			overflow: hidden;
+			width: 234px;
+			_width:234px;
+			height: 450px ;
+			
+		}
+		.navBar_rightSubNav a { 
+			display:block; 
+			width:100%;
+			height: 225px; 
+			text-align: center;
+			vertical-align: middle;
+			border-bottom: 1px solid #ddd;
+		}
+		.navBar_row{
+			padding-bottom: 7px;
+		}
+		.col-106{ width: 106%;}
+		.navBar_brandList.col-106 li{ width: 8%;}
+		.col-4-inner{ padding-right: 15px;   overflow: hidden;}
+		div.col-110,ul.col-110{ width: 110%;}
+		.navBar_brandList li.col-3{
+			width: 24%;
+			_width: 22%;
+			text-align: left;
+		}
+		.col-4,
+		.navBar_brandList li.col-4{
+			float: left;
+			overflow: hidden;
+			width: 33.33333333%;
+			_width:33%;
+		}	
+		.navBar_leftAdBox{
+			float: right;
+			width: 66.66666%;
+			_width: 66%;
+			height: 218px;
+			margin-top: 17px;
+			
+		}
+		.navBar_leftAdBox_inner{
+			
+			height: 199px;
+		}
+		.navBar_leftAdBox a {
+			display: block;
+			float: left;
+			width: 50%;
+			height: 199px;
+			text-align: center;
+			vertical-align: middle;
+			
+			margin-left: -1px;
+		}
+		.navBar_leftAdBox a:last-child{ border-right: none;}
+		.navBar_leftAdBox img{
+			margin-top: 9px;
+			width: 180px;
+			height: 180px;
+			
+		}
+		.navBar_adBox-sm{
+			display: block;
+			margin-top: 12px;
+			width: 100%;
+			height: 96px;
+			background: red;
+		}
+		.navBar_adBox-sm img{
+			/*图片宽度设置216px;高度96px*/
+			width: 100%;
+			height: 96px;
+		}
+		/*弹出层*/
+		
+		 */
+	/*-----二级导航e------*/
+/*-----导航栏e-----*/

@@ -1,0 +1,780 @@
+.v6_floatAd
+{
+    position:absolute;
+    top:12px;
+    left: 50%;
+    margin-left: 410px;
+    z-index:99;
+}
+/*-------大轮播s-------*/
+	.focusBox{
+		position: relative;
+		width: 100%;
+		height: 453px;
+		
+	}
+	.focusBox_inner{ margin: 0 auto;}
+	.focusBox li{
+		position: absolute;
+		width: 100%;
+		height: 453px;
+	}
+	.focusBox .mid_box{
+		position: relative;
+		height: 453px;
+		vertical-align: middle;
+		text-align: center;
+	}
+	.focusBox li a{ display: block; width: 100%;}
+	.focusBox_addBox{
+		position: absolute;
+		right: 0;
+		top:0;
+		width: 190px;
+		height: 453px;
+	}
+	.focusBox_addBox a{
+		position: relative;
+		margin: 0 auto;
+		width: 190px;
+		height: 226px;
+		overflow: hidden;
+		margin-bottom: 1px;
+		background: #fff;
+		opacity: 0.7\9\0;
+		filter:alpha(opacity=70)\9\0;
+	}
+	.focusBox_addBox a:hover{
+		transform:translate3d(10px,0, 0);
+		-webkit-transform:translate3d(10px,0, 0);
+		-ms-transform:translate3d(10px,0, 0);
+		-moz-transform:translate3d(10px,0, 0);
+		-o-transform:translate3d(10px,0, 0);
+		opacity: 1\9\0;
+		filter:alpha(opacity=100)\9\0;
+	}
+	.tst{
+		-webkit-transition:all 0.4s;
+		-ms-transition:all 0.4s;
+		-moz-transition:all 0.4s;
+		-o-transition:all 0.4s;
+		transition:all 0.4s;
+	}
+	.focusBox_titCell{
+		position: absolute;
+		left: 50%;
+		bottom: 10px;
+		display: inline-block;
+		padding:0 5px;
+		text-align: center;
+	}
+	.focusBox_titCell span{
+		display: inline-block;
+		margin: 0 3px;
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		border-radius: 10px;
+		background: #000;
+		color: #fff;
+		opacity: 0.6;
+		filter:alpha(opacity=60);
+		cursor: pointer;
+	}
+	.focusBox_titCell span.active{
+		background: #c40000;
+		opacity: 1;
+		filter:alpha(opacity=100);
+		box-shadow: 0 0 3px rgba(255,255,255,0.7);
+	}
+/*-------大轮播e-------*/
+
+
+.mainContent{position:relative; z-index:10; overflow: hidden; padding-top: 10px;}
+.section{ width:100%; overflow: hidden; margin-top:20px;}
+.section_tit{
+	height: 22px;
+	line-height: 22px;
+	font-family: "Microsoft Yahei";
+	color: #adadad;
+	margin-bottom: 6px;
+}
+.section_tit span{
+	font-size: 18px;
+	color: #515151;
+}
+/*------广告滑动s------*/
+	.slideAd{ overflow: hidden;}
+	.leftAd{
+		width: 210px;
+		height: 150px;
+		overflow: hidden;
+	}
+	.leftAd img{
+		width: 210px;
+		height: 153px;
+	}
+	.slideAd_container{
+		position: relative;
+		width: 990px;
+		height: 170px;
+		overflow: hidden;
+	}
+
+	.slideAd_container ul{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 1980px;
+		z-index: 11;
+	}
+	.slideAd_container li{
+		float: left;
+		width: 990px;
+		height: 170px;
+	}
+	.slideAd_container .slideAd_imgBox{
+		float: left;
+		width: 25%;
+		+width:247px;
+		height: 170px;
+		
+	}
+	.slideAd_imgBox a{
+		display: block;
+		padding-right: 1px;
+	}
+	li .slideAd_imgBox:last-child  a{
+		padding-right: 0;
+	}
+	.slideAd_imgBox img{
+		width: 100%;
+		height: auto;
+	}
+	.slideAd_prevBtn,
+	.slideAd_nextBtn
+	{
+		display: none;
+		position: absolute;
+		top:50%;
+		margin-top: -31px;
+		width: 27px;
+		height: 62px;
+		background: #111;
+		opacity: 0.3;
+		filter:alpha(opacity=30);
+		text-align: center;
+		line-height: 62px;
+		color: #fff;
+		cursor: pointer;
+		z-index: 13;
+	}
+	.slideAd_container:hover .slideAd_prevBtn,
+	.slideAd_container:hover .slideAd_nextBtn
+	{
+		display: block;
+	}
+	.slideAd_prevBtn:hover,
+	.slideAd_nextBtn:hover{
+		opacity: 0.7;
+		filter:alpha(opacity=70);
+		color: #fff;
+	}
+	.slideAd_prevBtn{ left:0;}
+	.slideAd_nextBtn{ right:0;}
+/*------广告滑动e------*/
+
+/*------购酒闪购S------*/
+	.flashBar{
+		 position: relative;
+		 width: 1200px;
+		 +height:263px;
+	}
+	.section_tit a{ color: #adadad;}
+	.flashBuy_content{
+		width: 936px;
+		height: 231px;
+		border:1px solid #ddd;
+	}
+	
+	.flashBuy_content ul{
+		height: 100%;
+	}
+	.flashBuy_content li{
+		float: left;
+		width: 20%;
+		height:100%;
+	}
+
+	.flashBuy_proBox_inner{
+		padding: 0 20px;
+	} 
+	.flashBuy_content li:last-child .flashBuy_proTxt{ border-right:none;}
+	.flashBuy_imgBox {
+		display: block;
+		padding-top: 5px;
+		width: 100%;
+		height: 130px;
+		text-align: center;
+	}
+	.flashBuy_imgBox img{
+		width: 130px;
+		height: 130px;
+	}
+	.flashBuy_tit{
+		display: block;
+		margin-top: 10px;
+		height: 36px;
+		overflow: hidden;
+	}
+	.flashBuy_price{
+		display:block;
+		margin-top:5px;
+		font-size: 16px;}
+	.leftTime{
+		height: 24px;
+		width: 100%;
+		line-height: 24px;}
+	.leftTime .t1,.leftTime .t2{ color: #c40000;}
+	.leftTime_txt{ line-height: 24px;}
+	
+	.flashBuy_proTxt{
+		padding: 0 15px;
+		border-right: 1px solid #ddd;
+	}
+	.flashNews{ 
+		+position: absolute; 
+		+right: 0; 
+		+top: 0px; 
+		width: 252px;
+	}
+	.flashNews_content{
+		+width:250px; 
+		height: 231px;
+		border:1px solid #ddd;
+	}
+	.flashNews_inner{ padding:10px 10px 4px 10px;}
+	.flashNews_list a{
+		display: block;
+		width: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow:ellipsis;
+		height: 28px;
+		color: #999;
+		line-height: 28px;
+	}
+	.flashNews_list b{ color: #515151;}
+	.flashNews_list a:hover,
+	.section_tit a:hover
+	{ color: #c40000;} 
+/*------购酒闪购e------*/
+/*------三图合成广告s------*/
+	.floor_banner a{
+		float: left;
+		overflow: hidden;
+	}
+	.floor_banner img{
+		width: 400px;
+		height: 125px;
+	}
+
+
+/*------三图合成广告e------*/
+/*------购酒推荐s------*/
+	.recommendBox{
+		height: 398px;
+		border: 1px solid #ddd;
+		overflow: hidden;
+
+	}
+	.recommendBox_leftContent,
+	.recommendBox_rightContent
+	{
+		float: left;
+		width: 238px;
+		height: 398px;
+		border-left: 1px solid #ddd;
+		border-right: 1px solid #ddd;
+		background: #fcf0d6;
+		overflow: hidden;
+	}
+	.recommendBox_rightContent{ border-right: none;}
+	.recommendBox_leftContent img,
+	.recommendBox_rightContent img{
+		width: 238px;
+		height: 398px;
+	}
+	.recommendBox_centerContent{
+		float: left;
+		width: 719px;
+		height: 398px;
+	}
+	.recommendBox_centerContent li{
+		float: left;
+		margin-top: -1px;
+		width: 239px;
+		height: 199px;
+		border-top: 1px solid #ddd;
+		text-align: center;
+	}
+	.recommendBox_centerContent li:nth-child(2),
+	.recommendBox_centerContent li:nth-child(5)
+	{
+		border-right: 1px solid #ddd;
+		border-left: 1px solid #ddd;
+	} 
+	.rcBox_cate h2 { 
+	    display: inline-block;
+        margin-top: 15px;
+        width: 150px;
+        height:20px;
+        font-size: 18px;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .rcBox_cate1 
+    {
+        width: 200px;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+	.rcBox_price{
+		display: inline-block;
+		margin-top: 5px;
+		height: 18px;
+		line-height: 18px;
+		padding:0 10px;
+		border-radius:9px;
+		background: #fb3c22;
+		color: #fff;
+	}
+	.recommendBox_centerContent li img{
+		width: 100px;
+		height: 100px;
+		-webkit-transition:all 0.4s;
+		-ms-transition:all 0.4s;
+		-moz-transition:all 0.4s;
+		-o-transition:all 0.4s;
+		transition:all 0.4s;
+	}
+	.recommendBox_centerContent li:hover img{
+		-webkit-transform:translate3d(-10px,0,0);
+		-moz-transform:translate3d(-10px,0,0);
+		-ms-transform:translate3d(-10px,0,0);
+		-o-transform:translate3d(-10px,0,0);
+		transform:translate3d(-10px,0,0);
+	}
+	.rcBox_title a{
+		display: inline-block;
+		width: 80%;
+		text-align: center;
+	}
+/*------购酒推荐e------*/
+
+/*--------楼层公用s--------*/
+	.floor_container{
+		margin-top: -2px;
+		border-top: 2px solid #d00d0f;
+		height:711px;
+	}
+	.floor_t{
+		height: 37px;
+		overflow: hidden;
+	}
+	.floor_t h2 {
+	  float: left;
+	  display: inline;
+	  height: 30px;
+	  font-size: 16px;
+	  line-height: 30px;
+	}
+	.floor_t h2 i{
+		display: inline-block;
+		width: 28px;
+		height: 22px;
+		text-align: center;
+		line-height: 22px;
+		vertical-align: middle;
+		font-size: 12px;
+		color: #fff;
+		background: #d00d0f;
+	}
+/*--------楼层公用e--------*/
+/*------购酒楼层选项卡s------*/
+	.gjw_tabItemBox{
+		border: solid 1px #ddd;
+		border-bottom: none;
+		height: 34px;
+		line-height: 34px;
+		z-index: 1;
+		cursor:pointer;
+	}
+	.gjw_tabItem{
+		position: relative;
+		float: left;
+		display: inline;
+		height: 36px;
+		z-index: 2;
+		white-space: nowrap;
+	}
+	.gjw_tabItem a{
+		float: left;
+		height: 34px;
+		padding: 0 16px;
+		text-decoration: none;
+		line-height: 34px;
+		overflow: hidden;
+		background: #fff;
+		border-left: solid 1px #fff;
+		border-right: solid 1px #fff;
+		white-space: nowrap;
+	}
+	.gjw_tabItem.active a {
+	  position: relative;
+	  margin-left: -1px;
+	  margin-top: -1px;
+	  border-left: solid 1px #d00d0f;
+	  border-right: solid 1px #d00d0f;
+	  border-top: solid 3px #d00d0f;
+	  line-height: 30px;
+	  color: #d00d0f;
+  	  text-indent: 1px;
+	}
+	.gjw_tabItem.active span{ display: none;}
+	.gjw_tabItem span{
+	  position: absolute;
+	  width: 1px;
+	  background: #ccc;
+	  overflow: hidden;
+	  height: 14px;
+	  top: 10px;
+	  right: 0;
+	}
+	
+	.gjw_tabSide{
+		width: 319px;
+	}
+	.gjw_tabSideBanner,.gjw_tabSideBanner img{
+		display: block;
+		width: 319px;
+		height: 237px;
+		overflow: hidden;
+		background: #ffa200;
+	}
+	
+	.gjw_tabBox{ 
+		display: none;
+		width: 881px;
+		/* height: 476px; */
+		/* overflow: hidden; */
+	}
+	.gjw_tabBox.active{
+		display: block;
+	}
+	.gjw_tabSideNav {
+		padding-left: 8px;
+		line-height: 18px;
+		padding-top: 23px;
+		height: 71px;
+		background: #fff6e5;
+	}
+	.tab_sideAdLink,.tab_sideAdLink2{
+		position: relative;
+		display: block;
+		width: 319px ; 
+		overflow: hidden;
+	}
+	.tab_sideAdLink{ height: 143px;}
+	.tab_sideAdLink2{  height: 237px;}
+	.tab_sideAd{ width: 319px ;}
+	.gjw_adBox_xs{
+		width: 441px;
+		height:237px;
+		overflow: hidden;
+		+margin-left:1px;
+		margin-right: -1px;
+		
+	}
+	.gjw_adBox_xs img{ width: 219px; height: 236px;} 
+	.gjw_adBox_xs a{
+		float: left;
+		
+		overflow: hidden;
+		width: 219px;
+		+width:218px;
+		height: 236px;
+		border-right: 1px solid #ddd;
+		border-bottom: 1px solid #ddd;
+	}
+	.gjw_tabSideNav a{ color: #ac6f05;}
+
+	.gjw_tabSideNav li{
+		float: left;
+		margin-bottom: 12px;
+		width: 76px;
+ text-align: center; 
+		white-space: nowrap;
+		border-right: 1px solid #ac6f05;
+	}
+	.gjw_slideBox{
+		position: relative;
+		width: 440px;
+		height: 237px;
+		overflow: hidden;
+	}
+	.gjw_slideBody {
+		width: 300%;
+		overflow: hidden;
+	}
+	.gjw_slideBody li{
+		float: left;
+	}
+	.gjw_slideBtn a{
+		position: absolute;
+		top: 50%;
+		margin-top: -31px;
+		z-index: 1;
+		display: block;
+		width: 28px;
+		height: 62px;
+		line-height: 62px;
+		background: gray;
+		background: rgba(0,0,0,.2);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#32000000, endColorstr=#32000000);
+		color: #fff;
+		text-align: center;
+		font-size: 22px;
+		font-weight: 400;
+		font-family: simsun;
+		cursor:pointer;
+	}
+	.gjw_slideBtn a:hover{ color:#fff;}
+	.gjw_slideBtn a.gjw_slideNext{
+		right: 0;
+	}
+	.gjw_slideNav {
+		position: absolute;
+		display: inline-block;
+		width: 100%;
+		text-align: center;
+		bottom: 10px;
+	}
+	.gjw_slideNav a{
+		display: inline-block;
+		margin: 0 3px;
+		width: 9px;
+		height: 9px;
+		border-radius: 50%;
+		background: #3e3e3e;
+	}
+	.gjw_slideNav a.active{
+		background: #b61b1f;
+	}
+	.gjw_adBox_big{
+		margin-left: 1px;
+		width: 880px;
+		height: 236px;
+		border-bottom: 1px solid #ddd;
+	}
+	.gjw_adBox_big li{
+		float:left;
+		width: 25%;
+		height: 236px;
+		border-bottom: 1px solid #ddd;
+	}
+	.gjw_tabBox_proList li{
+		float: left;
+		width: 25%;
+		+width:220px;
+		height: 238px;
+	}
+	.gjw_tabBox_proBox{
+		  padding: 0 15px;
+		  height: 236px;
+		  overflow: hidden;
+		  border-right: 1px solid #ddd;
+		  border-bottom: 1px solid #ddd;
+		  display:block;
+	}
+	.gjw_tabBox_proBox p
+	{
+	    height:36px;
+	}
+	.gjw_tabBox_title{
+		margin-top: 10px;
+		display: block;
+		width: 100%;
+		overflow: hidden;
+		height: 36px;
+	}
+	.gjw_tabBox_price{
+		  margin-top: 5px;
+		  font-size: 15px;
+		  font-family: Verdana;
+		  color: #E4393C;
+	}
+	.gjw_tabBox_imgBox{ text-align: center; margin-top: 5px;}
+	.gjw_tabBox_imgBox img{ width: 150px; height: 150px;}
+	.gjw_adBox_big div img{ width:219px; height: 236px;}
+	.gjw_adBox_big div{ border-right: 1px solid #ddd;}
+	.floor2 .gjw_tabSideNav{ background: #eae6ec;}
+	.floor2 .gjw_tabSideNav li{ border-right: 1px solid #340645;}
+	.floor2 .gjw_tabSideNav a{ color: #340645;}
+	.floor3 .gjw_tabSideNav{ background: #f9eded;}
+	.floor3 .gjw_tabSideNav li{ border-right: 1px solid #c84e4e;}
+	.floor3 .gjw_tabSideNav a{ color: #c84e4e;}
+	.floor4 .gjw_tabSideNav{ background: #f0faeb;}
+	.floor4 .gjw_tabSideNav li{ border-right: 1px solid #163704;}
+	.floor4 .gjw_tabSideNav a{ color: #163704;}
+	.gjw_tabSideNav li:nth-child(4n){
+		border-right: none;
+	}
+/*------购酒楼层选项卡e------*/
+/*-------民星推荐s--------*/
+.star_container{ height: 243px;}
+.startPro{ margin:29px 0 0 5px; overflow: hidden;}
+.startPro img{ width: 236px; height: 207px;}
+/*-------民星推荐e--------*/
+/*-------品牌馆s--------*/
+.brand_container{
+	height: 399px;
+}
+.brandBox{
+	border: 1px solid #ddd;
+	border-top: none;
+	overflow:hidden;
+	padding:0 0 15px 15px;
+}
+.brandBox a{
+	float: left;
+	margin-top: 15px;
+	width: 20%;
+	text-align: center;
+}
+.brandBox a:hover img{
+	left: -156px;
+}
+.v6_brandBox_imgBox{
+	position: relative;
+	overflow: hidden;
+	width: 221px;
+	height: 107px;
+}
+.brandBox img{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 377px;
+	height: 107px;
+	-webkit-transition:all 0.4s ease-out;
+	-ms-transition:all 0.4s ease-out;
+	-moz-transition:all 0.4s ease-out;
+	-o-transition:all 0.4s ease-out;
+	transition:all 0.4s ease-out;
+}
+/*-------品牌馆e--------*/
+
+/*------楼层跳转s--------*/
+	.card_container {
+	      width: 44px;
+	      height: 44px;
+	      position: relative;
+	      -webkit-perspective: 800px;
+	         -moz-perspective: 800px;
+	           -o-perspective: 800px;
+	              perspective: 800px;
+	}
+
+    .card {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      -webkit-transition: -webkit-transform 0.6s;
+         -moz-transition: -moz-transform 0.6s;
+           -o-transition: -o-transform 0.6s;
+              transition: transform 0.6s;
+      -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+    }
+
+    .card.active {
+      -webkit-transform: rotateY( 180deg );
+         -moz-transform: rotateY( 180deg );
+           -o-transform: rotateY( 180deg );
+           /*  transform: rotateY( 180deg ); */
+    }
+	
+    .card div{
+      position: absolute;
+      left: 0;
+      top: 0;
+      text-align: center;
+      width: 42px;
+	  height: 42px;
+	  font-family: "Microsoft Yahei";
+	  -webkit-backface-visibility: hidden;
+         -moz-backface-visibility: hidden;
+           -o-backface-visibility: hidden;
+              backface-visibility: hidden;
+      
+    }
+
+    .card .front,
+	.backTop
+   	{
+   		z-index: 3;
+	    border: 1px solid #ddd;
+		font-size: 16px;
+		line-height: 42px;
+		background: #fafafa;
+		color: #c1c1c1;
+		text-align: center;
+
+	}
+	.card.active .front{ z-index: 1;}
+	.card.active .back{ z-index: 3;}
+    .card .back 
+    {
+    	z-index: 1;
+      	border: 1px solid #d9000e;
+		font-size: 12px;
+		line-height: 16px;
+		background: #d9000e;
+		color: #fff;
+	      -webkit-transform: rotateY( 180deg );
+	         -moz-transform: rotateY( 180deg );
+	           -o-transform: rotateY( 180deg );
+	             /*  transform: rotateY( 180deg ); */
+    }
+    .back span{
+    	display: block;
+    	margin-top: 5px;
+    }
+	.floorNav{
+		display: none;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		margin-left: -654px;
+		margin-top: -154px;
+		width: 44px;
+		height: 308px;
+		overflow: hidden;
+		z-index:6;
+	}
+	.backTop{
+		display: block;
+		width: 42px;
+		height: 42px;
+		
+	}
+	.backTop span{ font-size: 18px;}
+	
+/*------楼层跳转e--------*/

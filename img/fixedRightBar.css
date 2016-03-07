@@ -1,0 +1,96 @@
+/*------------右边控制栏s---------------*/
+.rightFixedBar{
+	position: fixed;
+	_display:none;
+	_position: absolute;
+	width: 32px;
+	right: 0;
+	top: 0;
+	width: 32px;
+	height: 100%;
+	background: #eaeaea;
+	z-index: 10003;
+	text-align: center;
+	color: #fff;
+}
+.rightFixedBar .iconfont{
+	font-size: 18px;
+	
+}
+.rightFixedBar_inner{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -216px;
+	width: 32px;
+	height: 432px;
+}
+.rightFixedBar_inner .rb_btn{
+	position: relative;
+	color: #c40000;
+}
+.rightFixedBar_inner .rb_btn:hover{
+	background: #c40000;
+	color: #fff;
+}
+.rb_btn{
+	display: block;
+	padding:0 3px;
+	cursor: pointer;
+}
+.rb_btn .footer_iconBox
+{
+    padding:10px 0px;
+	border-bottom: 1px solid #c8c8c8;
+}
+.rb_btn:hover .footer_iconBox{ border-color: #c40000;}
+.iconBox_tips{
+	display: none;
+	position: absolute;
+	height: 40px;
+	line-height: 40px;
+	width: 108px;
+	background: #494949;
+	right: 80px;
+	/* right: 32px; */
+	top: 0;
+	color: #fff;
+	text-align: center;
+	font-size: 12px;
+	opacity: 0;
+	filter:alphap(opacity=0);
+}
+.iconBox_tips.tips_zan{
+	padding: 10px;
+	width: 212px;
+	height: 121px;
+	border:1px solid #ddd\9\0;
+	box-shadow: 0 0 1px rgba(0,0,0,0.6);
+	background: #fff;
+
+}
+.iconBox_tips.tips_zan img{
+	width: 212px;
+	height: 121px;
+}
+.iconBox_tips.tips_qrcode .tips_arrow{ color: #fff;}
+.iconBox_tips.tips_qrcode{
+	width: 205px;
+	height: 195px;
+	background: #fff;
+	box-shadow: 0 0 1px rgba(0,0,0,0.6);
+}
+.iconBox_tips.tips_zan .tips_arrow{ color: #fff;}
+.tips_arrow{
+	position: absolute;
+	right: -8px;
+	top:12px;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	text-align: center;
+	font-size: 16px;
+	color: #494949;
+	font-family: "\5b8b\4f53";
+}
+/*------------右边控制栏s---------------*/

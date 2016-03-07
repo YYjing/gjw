@@ -1,0 +1,223 @@
+/*
+* @Author: Administrator
+* @Date:   2016-02-02 14:22:15
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-02-04 23:55:50
+*/
+
+
+
+
+/*购酒闪购*/
+.flashSalesContent .flashSales .imgBox{
+  width: 925px;
+  height: 231px;
+  line-height: 24px;
+}
+.flashSalesContent .flashSales .imgBox ul{
+  width: 100%;
+}
+.flashSalesContent .flashSales .imgBox li{
+  line-height: 16px;
+  float: left;
+  width: 20%;
+  height: 100%;
+}
+.flashSalesContent .flashNews .newsBox{
+  width: 250px;
+  height: 231px;
+  overflow: hidden;
+}
+/*购酒闪购时间设置*/
+.leftTime{
+  height: 24px;
+  width: 100%;
+  line-height: 24px;}
+.leftTime .t1,.leftTime .t2{ color: #c40000;}
+.leftTime_txt{ line-height: 24px;}
+
+/*三张图片组成的广告图*/
+.gj-mainContent .threeBanner a{
+  float: left;
+}
+/*购酒推荐主要部分*/
+.gj-mainContent .recommend .adsMain li a{
+  float: left;
+  width: 239px;
+  height: 190px;
+  color: #333;
+  border: 1px solid #ddd;
+  border-bottom: 0 none;
+  margin: -1px 0 0 -1px;
+  padding-top: 10px;
+}
+.gj-mainContent .recommend .content{
+  height: 398px;
+}
+.gj-mainContent .recommend .adsMain ul{
+  width: 720px;
+  height: 398px;
+}
+.gj-mainContent .recommend .adsMain li a img{
+  width: 100px;
+  height: 100px;
+  transition: transform 0.5s ease-out;
+}
+.gj-mainContent .recommend .adsMain li:hover a img{
+  transform: translateX(-10px);
+}
+.gj-mainContent .recommend .adsMain li a .price{
+  display: inline-block;
+  padding: 2px 10px;
+  height: 16px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #FB3C22;
+}
+/*1楼白酒馆*/
+
+.floor .tabSide .sideNav{
+  width: 309px;
+  height: 74px;
+  padding: 10px 0 10px 10px;
+  background-color: #FFF6E5;
+}
+.floor .tabSide .sideNav li a{
+  float: left;
+  width: 24%;
+  margin-top: 10px;
+  border-right: 1px solid #AC6F05;
+  color: #AC6F05;
+}
+.floor .tabSide .sideNav li:nth-child(4n) a{
+  border: none;
+}
+.floor .title{
+  height: 36px;
+}
+.floor .title .tab{
+  border: 1px solid #ddd;
+  border-bottom: none;
+}
+.floor .title .floorName{
+  display: inline-block;
+  width: 28px;
+  height: 22px;
+  line-height: 22px;
+  font-weight: normal;
+  background-color: #D9000E;
+  border-radius: 5px;
+}
+/*1楼白酒馆的tab栏*/
+
+.floor .title .tabTit li{
+  float: left;
+  position: relative;
+}
+.floor .title .tabTit li a{
+  display: inline-block;
+  padding: 5px 16px;
+}
+.floor .title .tabTit li.active a{
+  position: relative;
+  border: 2px solid #D9000E;
+  background-color: #fff;
+  border-bottom-color: #fff;
+  /*border-bottom: none;这个不可以*/
+  z-index: 2;
+
+}
+.floor .title .tabTit li span{
+  position: absolute;
+  top: 12px;
+  left: -15px;
+  color: #ccc;
+  display: inline-block;
+}
+.floor .content{
+  border-top: 2px solid #D9000E;
+}
+
+/*<!-- 楼层1 tab栏第2屏 -->*/
+
+.floor .tabPanel .tabBox{
+  overflow: hidden;
+  width: 881px;
+  height: 711px;
+  position: relative;
+}
+
+.floor .tabPanel .tabBox ul{
+  width: 881px;
+  height: 711px;
+  position: relative;
+}
+.floor .tabPanel .tabBox li{
+  box-sizing: border-box;
+  float: left;
+  /*overflow: hidden;*/
+  border: 1px solid #ddd;
+  border-top: none;
+  border-left: none;
+  width: 25%;
+  height: 237px;
+}
+.floor .tabPanel .tabBox li.carousel{
+  width: 440px;
+  border: none;
+  overflow: hidden;
+  margin-left: -1px;
+  position: relative;
+}
+.floor li.carousel .imgs{
+  position: absolute;
+  left: -440px;
+  top: 0;
+  width: 2200px;
+  height: 237px;
+}
+.floor li.carousel .imgs a img{
+  float: left;
+}
+
+.floor .tabBox li.pointBox{
+  width: 50%;
+  height: 237px;
+  position: absolute;
+}
+.floor li.pointBox .point{
+  width: 70px;
+  position: absolute;
+  bottom: 10px;
+  left: 40%;
+}
+.floor li.pointBox .point span{
+  float: left;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,.7);
+  margin-left: 10px;
+}
+.floor li.pointBox .point span.now{
+  background: #f00;
+}
+
+/*6楼*/
+.floor6 .brandBox{
+  border: 1px solid #ddd;
+  padding: 0 15px 15px 0;
+}
+.floor6 .brandBox a{
+  float: left;
+  padding: 15px 0 0 15px;
+  width: 221px;
+  overflow: hidden;
+}
+/*6楼鼠标滑过图片移动x坐标,图片长度大于盒子*/
+.floor6 .brandBox a img{
+  transition : transform 0.5s ease-out;
+}
+.floor6 .brandBox a:hover img{
+  transform: translateX(-156px);
+}

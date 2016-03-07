@@ -1,0 +1,68 @@
+/*
+* @Author: Administrator
+* @Date:   2016-02-02 14:46:51
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-02-02 17:03:21
+*/
+
+.gj-rightFixedBar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 32px;
+  background-color: #EAEAEA;
+  z-index: 999;
+}
+.gj-rightFixedBar .iconBar{
+  position: relative;
+
+}
+/*防止滑动边框外面时显示*/
+.gj-rightFixedBar .content .rightBar{
+  /*height: 0;*/
+  display: none;
+}
+.gj-rightFixedBar .content{
+  width: 32px;
+  height: 432px;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  margin-top: -216px;
+  z-index: 999;
+}
+
+.gj-rightFixedBar .iconBox{
+  border-bottom:1px solid #ddd;
+  padding: 8px 8px;
+}
+.gj-rightFixedBar .content .iconBox:hover{
+  background-color: #D9000E;
+  color: #fff;
+}
+.gj-rightFixedBar .tips {
+  background-color: #494949;
+  width: 108px;
+  height: 40px;
+  line-height: 40px;
+}
+.gj-rightFixedBar .imgs{}
+.gj-rightFixedBar .imgs,
+.gj-rightFixedBar .tips {
+  position: absolute;
+  top: -16px;
+  right: 80px;
+  color: #fff;
+  opacity: 0;
+}
+.gj-rightFixedBar .icons{
+  position: absolute;
+  right: -11px;
+  top: -3px;
+  color: #494949;
+}
+
+.gj-rightFixedBar .imgs .icons{
+  color: #fff;
+}

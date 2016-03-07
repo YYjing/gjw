@@ -1,0 +1,398 @@
+/*
+* @Author: Nicole
+* @Date:   2016-02-01 20:33:54
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-02-02 22:14:20
+*/
+
+body {
+  color: #656565;
+  font-size: 12px;
+  text-align: center;
+  background-color: #fff;
+}
+
+
+/*顶部固定导航栏*/
+
+.gj-topFixedBar {
+  position: fixed;
+  top: -100px;
+  width: 100%;
+  z-index: 99;
+  height: 50px;
+  transition: all 1s ease-out;
+  background-color: rgba(221,37,37,.9);
+}
+
+.gj-topFixedBar .logo {
+  display: inline-block;
+  float: left;
+  padding-top: 5px;
+}
+
+.gj-topFixedBar .logo img {
+  height: 40px;
+}
+
+.fixedSearch .compSearch {
+  margin-top: 5px;
+  height: 32px;
+}
+
+
+/*顶部导航栏s*/
+
+
+/*导航栏左边*/
+/*关注我们和用户中心旋转样式*/
+.gj-topBar .gj-nav {
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  background-color: #F7F7F7;
+}
+.gj-nav .focus{
+  position: relative;
+}
+.gj-nav .focus > .iconfont,
+.gj-nav .userCenter .iconfont{
+  font-size: 8px;
+  transform: rotate(0deg);
+  transition: transform .2s ease-out;
+}
+.gj-nav .focus:hover,
+.message .userCenter:hover {
+  cursor: pointer;
+  color: rgb(217,39,39);
+  background-color: #fff;
+}
+
+.gj-nav .focus:hover > .iconfont,
+.gj-nav .userCenter:hover .iconfont{
+  transform: rotate(180deg);
+}
+/*关注我们微信图标*/
+.gj-nav .weixin{
+  display: none;
+}
+.gj-nav .weixin .iconfont {
+  position: absolute;
+  left: 0px;
+  top: 22px;
+  color: #fff;
+  z-index: 2;
+}
+
+.gj-nav .weixin img {
+  height: 200px;
+  width: 200px;
+  position: absolute;
+  left: 0px;
+  top: 33px;
+  z-index: 1;
+  display: inline;
+  box-shadow: 0 0 3px rgba(0,0,0,0.6);
+}
+
+.gj-nav .message >ul> li {
+  float: left;
+
+}
+
+.gj-nav .message li > span {
+  color: #ddd;
+}
+
+.gj-nav .message li .login,
+.gj-nav .message li .reg {
+  color: #0066CB;
+}
+
+.gj-nav .message li > a >span {
+  padding: 0 20px;
+}
+/*用户中心列表*/
+.gj-nav .message .userCenter {
+  display: inline-block;
+  position: relative;
+}
+
+.gj-nav .message ul.review {
+  white-space: nowrap;
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+  z-index: 999;
+  display: none;
+}
+
+.gj-nav .message .telphone {
+  font-size: 18px;
+  color: #D9000E;
+}
+
+
+/*顶部导航栏e*/
+
+
+/*顶部公告栏s*/
+
+.topNotice {
+  position: relative;
+}
+.gj-topNotice .toggleImgBox{
+  position: relative;
+  height: 80px;
+  overflow: hidden;
+}
+.gj-topNotice .smallImg{
+  position: absolute;
+  bottom: 80px;
+  left: 0;
+}
+
+.gj-topNotice .btn {
+  width: 15px;
+  height: 30px;
+  padding: 3px;
+  color: #fff;
+  font-size: 14px;
+  background-color: #666;
+  position: absolute;
+  right: 0;
+  top: 2px;
+  cursor: pointer;
+}
+
+.gj-topNotice .notice .specialNotice {
+  background-color: #FFF7D2;
+  height: 28px;
+  border: 1px solid #E4DEBC;
+  line-height: 28px;
+}
+
+
+/*顶部公告栏e*/
+
+
+/*搜索栏s*/
+
+.gj-search {
+  margin-top: 28px;
+}
+
+.gj-search .logo {
+  background: url(../img/hd_logo.jpg) no-repeat;
+  width: 360px;
+  height: 100px;
+  float: left;
+}
+
+.gj-search .logo .gj {
+  display: inline-block;
+  text-indent: -999em;
+}
+
+.gj-search .logo .img {
+  float: right;
+}
+/*购物车*/
+.gj-search .cart {
+  float: left;
+  margin-left: 98px;
+  width: 139px;
+  height: 34px;
+  line-height: 34px;
+  position: relative;
+  background-color: #F9F9F9;
+  border: 1px solid #DFDFDF;
+}
+.gj-search .cart:hover{
+  box-shadow: 0 0 3px rgba(0,0,0,0.3)
+}
+.gj-search .cart .count {
+  position: absolute;
+  right: 25px;
+  top: -5px;
+  height: 14px;
+  width: 14px;
+  line-height: 14px;
+  background-color: #D9000E;
+  border-radius: 7px 7px 7px 0;
+}
+/*购物车详细信息列表*/
+
+#cart_detaliList{
+  background-color: #fff;
+  position: absolute;
+  top: 35px;
+  right: 0px;
+  width: 308px;
+  border: 1px solid #dfdfdf;
+  z-index: 100;
+  line-height: 24px;
+  display: none;
+  box-shadow: 0 0 3px rgba(0,0,0,0.3)
+
+}
+#cart_detaliList .line{
+  position: absolute;
+  width: 139px;
+  height: 5px;
+  right: 0px;
+  top: -3px;
+  background: #fff;
+  z-index: 999;
+}
+#cart_detaliList li {
+  overflow: hidden;
+  padding: 8px;
+  height: 58px;
+  width: 288px;
+  border-bottom: 1px dotted #ddd;
+}
+
+#cart_detaliList li .content{
+  width: 150px;
+  height: 60px;
+  overflow: hidden;
+
+}
+#cart_detaliList li .content img{
+  vertical-align: top;
+}
+.gj-search .keywords {
+  float: left;
+  margin-left: 50px;
+  line-height: 40px;
+  color: #D9000E;
+}
+#cart_detaliList li:hover{
+  background-color: #f5f5f5;
+}
+.gj-search .keywords span {
+  padding: 0 6px;
+  border-right: 1px solid #ddd;
+}
+
+#cart_detaliList .sumBox{
+  width: 292px;
+  padding: 8px;
+  background: #f5f5f5;
+  _height: 29px;
+  line-height: 29px;
+  overflow: hidden;
+}
+#cart_detaliList .goCart {
+  height: 29px;
+  padding: 0 10px;
+  background: #E4393C;
+  color: #fff;
+  line-height: 29px;
+  border-radius: 3px;
+}
+/*全部商品分类*/
+
+.gj-products .topBar {
+  height: 36px;
+  border-bottom: 2px solid #BA000C;
+}
+
+.gj-products .goods .dt a {
+  display: block;
+  width: 210px;
+  height: 37px;
+  border-bottom: 1px solid #BA000C;
+  color: #fff;
+  font: 600 16px/36px "microsoft yahei";
+  background-color: #BA000C;
+}
+
+.gj-products .goods {
+  float: left;
+  height: 37px;
+  font-size: 14px;
+  background-color: #C81623;
+  position: relative;
+}
+.gj-products .goods .dd{
+  position: absolute;
+  background-color: #C81623;
+  left: 0;
+  top: 38px;
+  z-index: 9;
+  padding:1px 0;/*解决高度相同*/
+}
+.gj-products .navBar-navTab a {
+  color: #fff;
+  text-align: left;
+}
+
+
+/*category*/
+
+.gj-products .navBar-title a {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 600;
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0 4px 0 0;
+  padding: 0 3px;
+  color: #fff;
+}
+
+.gj-products .navBar-title {
+  color: #fff;
+  width: 200px;
+  text-align: left;
+  padding: 5px;
+  line-height: 30px;
+}
+
+.gj-products .navBar-content {
+  width: 210px;
+}
+
+.gj-products .navBar-content a {
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0 4px 0 0;
+  padding: 0 2px;
+  line-height: 21px;
+  color: #fff;
+}
+/*大类别分组*/
+.gj-products .category {
+  float: left;
+  position: relative;
+}
+
+.gj-products .category li {
+  float: left;
+  padding: 0 20px;
+}
+
+.gj-products .category li a {
+  font-size: 16px;
+  font-weight: 700;
+  height: 36px;
+  line-height: 36px;
+}
+
+.hot,
+.new {
+  background-color: #D9000E;
+  border-radius: 3px;
+  position: absolute;
+  bottom: 26px;
+}
+
+.hot {
+  left: 140px;
+}
+
+.new {
+  left: 250px;
+}

@@ -1,0 +1,229 @@
+/*
+* @Author: Administrator
+* @Date:   2016-02-01 20:45:41
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-02-04 23:49:26
+*/
+
+
+/*basic*/
+
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*要注意表单元素并不继承父级 font 的问题
+body,button,input,select,textarea{
+  -webkit-font-smoothing: antialiased;
+  font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+  color: #666;
+  background: #fff;
+}
+*/
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.al {
+  text-align: left;
+}
+
+.ac {
+  text-align: center;
+}
+
+.ar {
+  text-align: right;
+}
+
+.clearfix::after,
+.clearfix::before {
+  content: '';
+  display: table;
+}
+
+.clearfix::after {
+  clear: both
+}
+
+.clearfix {
+  zoom: 1;
+  /*for IE 6/7*/
+}
+
+a,
+s,
+i,
+em {
+  text-decoration: none;
+  color: #656565;
+  font-size: 12px;
+  line-height: 24px;
+}
+
+a:hover {
+  color: #D9000E;
+  /*font-size: 14px;*/
+}
+
+.ball {
+  border: 1px solid #ddd;
+}
+.b-all {
+  border: 1px solid #ddd;
+}
+
+.border-l {
+  border-left: 1px solid #ddd;
+}
+
+.border-r {
+  border-right: 1px solid #ddd;
+}
+
+.border-t {
+  border-top: 1px solid #ddd;
+}
+
+.border-b {
+  border-bottom: 1px solid #ddd;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.mb20 {
+  margin-bottom: 20px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mt70 {
+  margin-top: 70px;
+}
+
+.mt10 {
+  margin-top: 10px;
+}
+.mt5 {
+  margin-top: 5px;
+}
+.m10{
+  margin: 10px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+
+.mr10 {
+  margin-right: 10px;
+}
+
+.pl5 {
+  padding-left: 5px;
+}
+.pl10 {
+  padding-left: 10px;
+}
+.pr10 {
+  padding-right: 10px;
+}
+
+.pt10 {
+  padding-top: 10px;
+}
+.pt20 {
+  padding-top: 20px;
+}
+
+.pb10 {
+  padding-bottom: 10px;
+}
+.p10{
+  padding: 10px;
+}
+.inBlock{
+  display: inline-block;
+}
+ol,
+ul {
+  list-style: none;
+}
+
+fieldset,
+img,
+input,
+button {
+  outline: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  vertical-align: middle;
+}
+
+textarea {
+  resize: none;
+}
+
+.whiteWord {
+  color: #fff;
+}
+
+.redWord {
+  color: #D9000E;
+}
+.lh16{
+  line-height: 16px;
+}
+.fs16{
+  font-size: 16px;
+}
+.fs12{
+  font-size: 12px;
+}
+.fs24{
+  font-size: 24px;
+}
+.fw{
+  font-weight: 600;
+}
+.lh24{
+  line-height: 24px;
+}
+/* 公共类提取版心 */
+.bs{
+  box-sizing: border-box;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}

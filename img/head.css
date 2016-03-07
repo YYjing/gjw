@@ -1,0 +1,110 @@
+﻿/*-----shine样式s-----*/
+.shine{ position: relative;}
+.shine:hover{ }
+.shine:before{
+	content: "";
+	position: absolute;
+	width: 80px;
+	height: 120%;
+	top: 0;
+	left: -150px;
+	overflow: hidden;
+	background: -moz-linear-gradient(left,rgba(255,255,255,0)0,rgba(255,255,255,.2)50%,rgba(255,255,255,0)100%);
+	background: -webkit-gradient(linear,left top,right top,color-stop(0%,rgba(255,255,255,0)),color-stop(50%,rgba(255,255,255,.2)),color-stop(100%,rgba(255,255,255,0)));
+	background: -webkit-linear-gradient(left,rgba(255,255,255,0)0,rgba(255,255,255,.2)50%,rgba(255,255,255,0)100%);
+	background: -o-linear-gradient(left,rgba(255,255,255,0)0,rgba(255,255,255,.2)50%,rgba(255,255,255,0)100%);
+	-webkit-transform: skewX(-25deg);
+	-moz-transform: skewX(-25deg);
+	
+}
+.shine:hover:before{
+	-webkit-animation:mymove 0.6s ease-out;
+	animation:mymove 0.6s ease-out;
+}
+@keyframes mymove
+{
+	from {left: -150px;}
+	to {left: 120%;}
+}
+
+@-moz-keyframes mymove /* Firefox */
+{
+	from {left: -150px;}
+	to {left: 120%;}
+}
+
+@-webkit-keyframes mymove /* Safari 和 Chrome */
+{
+	from {left: -150px;}
+	to {left: 120%;}
+}
+
+@-o-keyframes mymove /* Opera */
+{
+	from {left: -150px;}
+	to {left: 200%;}
+}
+/*-----shine样式e-----*/
+/*--顶部广告s---*/
+	.focusPic{
+		position: relative;
+		display: block;
+		height: 270px;
+		z-index: 0;
+		overflow: hidden;
+		clear:both;
+	}
+	.focusPic img{
+		width: 1200px;
+		height: 270px;
+	}
+	.focusPic .secondImg{
+		position: absolute;
+		bottom: -80px;
+		left: 0;
+		width: 1200px;
+		height: 80px;
+		z-index: 9;
+	}
+	.focusPic_close{
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 18px;
+		height: 38px;
+		text-align: center;
+		background: #666;
+		color: #fff;
+		z-index: 10;
+		cursor:pointer;
+	}
+/*--顶部广告e---*/
+
+.noticeBar{
+	padding: 0 10px;
+	width: 1178px;
+	height: 26px;
+	line-height: 26px;
+	border: 1px solid #e4debc;
+	background: #fff7d2;
+}
+.noticeBar a{color: #99999b; margin-left: 5px;}
+
+.noticeBar_close{ cursor: pointer; color: #dccf9a;}
+
+.w1000{ width:1200px;}
+.box{ overflow:hidden;}
+
+.navBar_cateItem a.v6_highLight{
+			background: #f90;
+			background: #fff;
+			border-radius:5px;
+			color: #c40000;		
+		}
+		.navBar_cateItem.hover a.v6_highLight{
+			background: #c40000;
+			color: #fff;
+		}
+		.navBar_cateItem.hover a.v6_highLight:hover{
+			color: #fff;
+		}

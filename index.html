@@ -1,0 +1,3206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/iconfont.css">
+  <link rel="stylesheet" href="css/bass.css">
+  <link rel="stylesheet" href="css/companents.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/Fixed.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/timer.css">
+  <script src='http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js'></script>
+  <script src='http://apps.bdimg.com/libs/jquery-lazyload/1.9.5/jquery.lazyload.js'></script>
+  <script src='lib/jquery.tab.js'></script>
+  <script src='lib/jquery.timer.js'></script>
+  <script src='lib/jquery.carousel.js'></script>
+  <!-- 懒加载图片-->
+  <script>
+  $(function() { //注意遇到第一张隐藏的图片时就会出问题
+    $('.imgLazy img:not([class="notLazy"])').lazyload({
+      effect: "fadeIn"
+    });
+  });
+  </script>
+  <!--[if IE 6]>
+  <script src="/v6/js/DD_belatedPNG_0.0.8a-min.js"></script>
+  <script>
+    $(function(){//处理ie6png透明图片做背景的兼容问题
+      DD_belatedPNG.fix('.png_bg');
+    })
+  </script>
+
+  <![endif]-->
+</head>
+
+<body>
+  <!-- 顶部固定导航栏 -->
+  <div class="gj-topFixedBar" id="gj_topFixedBar">
+    <div class="container">
+      <div class="logo">
+        <img src="img/whiteLogo.png" alt="">
+      </div>
+      <div class="fixedSearch">
+        <div class="compSearch">
+          <input type="text" class="pl10" placeholder="请搜索宝贝">
+          <button>搜索</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 顶部导航栏 -->
+  <div class="gj-topBar">
+    <!-- 顶部导航栏s -->
+    <div class="gj-nav">
+      <div class="container">
+        <div class="focus fl">
+          <i class="icon-erweima iconfont"></i>
+          <span>关注购酒网</span>
+          <i class="iconfont icon-jiantouxia1"></i>
+          <div class="weixin">
+            <i class="iconfont icon-xiangshang"></i>
+            <img src="./img/qrcode_06.jpg" alt="" />
+          </div>
+        </div>
+        <div class="message fr">
+          <ul>
+            <li class='login'>
+              Hi,请
+              <a href="#" class="login">登录</a> /
+              <a href="#" class="reg">注册</a>
+            </li>
+            <li>
+              <span>|</span>
+              <a href="#"><span>我的订单</span></a>
+              <span>|</span>
+            </li>
+            <li class="userCenter" id="userCenter">
+              <a href="#">
+                <span>用户中心<i class='iconfont icon-jiantouxia1'></i></span>
+              </a>
+              <ul class="review">
+                <li><a href="">商品评论</a></li>
+                <li><a href="">收藏夹</a></li>
+                <li><a href="">我的电子券</a></li>
+              </ul>
+            </li>
+            <li><span>|</span><a href="#"><span>在线客服</span></a></li>
+            <li><span>|</span><a href="#"><span>帮助</span></a></li>
+            <li><span>|</span><a href="#"><span class="redWord">提意见</span></a></li>
+            <li><span>|</span>
+              <a href="#">
+                <i class="iconfont icon-dianhua telphone"></i>
+                <i class="redWord fs16 fw">400-722-1919</i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- 顶部导航栏e -->
+      <!-- 顶部公告栏s -->
+    </div>
+    <!-- 顶部导航栏e -->
+    <!-- 顶部公告s -->
+    <div class="gj-topNotice clearfix">
+      <div class="container topNotice">
+        <div class="toggleImgBox">
+          <a href=""><img src="./img/fdf5137463f9477d85675225b1c1011d.jpg" class="smallImg" alt=""></a>
+          <a href=""><img src="./img/b59db3fc37c54b0c9a911d40e9b822ee.jpg" class="bigImg" alt=""></a>
+          <span class="btn">展开</span>
+        </div>
+        <div class="notice">
+          <i class="iconfont icon-crmtubiao68 fl pl10 pr10"></i>
+          <p class="specialNotice al">春节假期特别公告</p>
+        </div>
+      </div>
+    </div>
+    <!-- 顶部公告e -->
+  </div>
+  <!-- 搜索栏 -->
+  <div class="gj-search clearfix">
+    <div class="container">
+      <div class="logo">
+        <a href="购酒网" class="gj">购酒网</a>
+        <a href="" class="img"><img src="./img/c319be9f5e1b43bba93167340d71952b.gif" alt="购酒网"></a>
+      </div>
+      <div class="compSearch">
+        <input type="text" class="pl10" placeholder="请搜索宝贝">
+        <button id="btnsch">搜索</button>
+      </div>
+      <div class="cart ball">
+        <div class="cartBox">
+          <i class="iconfont icon-gouwuche"></i>
+          <span>我的购物车</span>
+          <span class="count whiteWord">1</span>
+        </div>
+        <div id="cart_detaliList">
+          <span class="line"></span>
+          <div class="al pl10 fw">最新加入的商品</div>
+          <ul>
+            <!-- 这里的内容动态添加-->
+            <li class="fl">
+              <a href="" class="fl content al">
+                <img src="./img/f17ecb7403534c90854e236c5b9f2ac3_0.jpg" alt="" />
+                <div class="detail pl10 inBlock lh16">
+                  <p>52度天下福</p>
+                  <p>1000ml</p>
+                </div>
+              </a>
+              <div class="fr operate ar">
+                <div class="redWord">&yen;<span>99</span>X <span>1</span></div>
+                <a>删除</a>
+              </div>
+            </li>
+          </ul>
+          <div class="sumBox clearfix">
+            <div class="sum fl">
+              总计<span class="productNum">1</span>件商品，共计
+              <allPrice class="redWord">&yen;99</allPrice>元
+            </div>
+            <button class="goCart fw fr">去购物车</button>
+          </div>
+        </div>
+      </div>
+      <div class="keywords">
+        <span>茅台</span>
+        <span>郎酒</span>
+        <span>五粮液</span>
+        <span>剑南春</span>
+        <span>泸州老窖</span>
+        <span>洋河</span>
+      </div>
+    </div>
+  </div>
+  <!-- 全部商品分类 -->
+  <div class="gj-products clearfix">
+    <div class="topBar">
+      <div class="container">
+        <div class="goods">
+          <div class="dt"> <a href="">全部商品分类</a></div>
+          <div class="dd">
+            <ul class="navBar-navTab">
+              <li>
+                <div class="navBar-title">
+                  <strong><a href="">购酒直通车</a>
+                  <span class="navBar-tip">HOT</span>
+                  <span class="arrow fr">&gt;</span>
+                  </strong>
+                </div>
+                <div class="navBar-content">
+                  <a href="">大坛美酒</a>
+                  <a href="">高端收藏</a>
+                  <a href="">送礼推荐</a>
+                  <a href="">整箱促销</a>
+                  <a href="">封顶49元</a>
+                  <a href="">婚宴用酒</a>
+                </div>
+              </li>
+              <li>
+                <div class="navBar-title">
+                  <strong><a href="">白酒</a>
+                  <span class="arrow fr">&gt;</span>
+                  </strong>
+                </div>
+                <div class="navBar-content">
+                  <a href="">茅台</a>
+                  <a href="">五粮液</a>
+                  <a href="">郎酒</a>
+                  <a href="">剑南春</a>
+                  <a href="">习酒</a>
+                  <a href="">酒鬼</a>
+                  <a href="">泸州</a>
+                  <a href="">年份老酒</a>
+                </div>
+              </li>
+              <li>
+                <div class="navBar-title">
+                  <strong><a href="">葡萄酒</a>
+                  <span class="arrow fr">&gt;</span>
+                   </strong>
+                </div>
+                <div class="navBar-content">
+                  <a href="">拉菲系列</a>
+                  <a href="">黄尾袋鼠</a>
+                  <a href="">奔富</a>
+                  <a href="">皇族雄狮</a>
+                  <a href="">张裕</a>
+                  <a href="">杰卡斯</a>
+                </div>
+              </li>
+              <li>
+                <div class="navBar-title">
+                  <strong><a href="">洋酒</a>
+
+                  <span class="arrow fr">&gt;</span>
+                  </strong>
+                </div>
+                <div class="navBar-content">
+                  <a href="">人头马</a>
+                  <a href="">芝华士</a>
+                  <a href="">皇家路易</a>
+                  <a href="">尊尼获加</a>
+                  <a href="">格兰菲迪</a>
+                  <a href="">百龄坛</a>
+                </div>
+              </li>
+              <li>
+                <div class="navBar-title">
+                  <strong><a href="">
+                  黄酒</a><a href="">保健酒</a> <a href="">啤酒</a>
+                  <span class="arrow fr">&gt;</span>
+                  </strong>
+                </div>
+                <div class="navBar-content">
+                  <a href="">古越龙山</a>
+                  <a href="">女儿红</a>
+                  <a href="">唐宋</a>
+                  <a href="">劲酒</a>
+                  <a href="">竹叶青</a>
+                  <a href="">蓝带</a>
+                </div>
+              </li>
+              <li>
+                <div class="navBar-title">
+                  <strong><a href="">
+                  茶叶</a><a href="">酒具</a> <a href="">新品</a><a href="">清仓专区</a>
+                  <span class="arrow fr">&gt;</span>
+                  </strong>
+                </div>
+                <div class="navBar-content">
+                </div>
+              </li>
+          </div>
+        </div>
+        <ul class="category">
+          <li><a href="" class="redWord">首页</a></li>
+          <li><a href="">特卖会</a>
+            <span class="hot whiteWord">hot</span></li>
+          <li><a href="">新品尝鲜</a>
+            <span class="new whiteWord">new</span></li>
+          <li><a href="">进口馆</a></li>
+          <li><a href="">陈年老酒</a></li>
+          <li><a href="">高端收藏酒</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="carousel"></div>
+  <!-- 简单轮播图 -->
+  <div class="compCarousel clearfix">
+    <div class="imgBox">
+      <ul>
+        <li>
+          <a href=""><img src="img/39d69cc6d11144ffab1c76ba14652e06.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="img/92e5fc54836f4b60a1f0c08abb96dc25.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="img/6c465ad42f0a484c98528bf348e7d09d.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="img/18f28af989f84eee93fcec828f011472.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="img/b554faf299ce4f2296d50b30a8c15667.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="img/24a7f8098001482480f49e773431eed8.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="img/359ea4e0f8d443aab6bde0fa587faaf4.jpg" alt=""></a>
+        </li>
+        <li>
+          <a href=""><img src="img/c0f722b39aba4f1e92f005b737e9b0e0.jpg" alt=""></a>
+        </li>
+      </ul>
+    </div>
+    <div class="pointBox">
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+      <span>4</span>
+      <span>5</span>
+      <span>6</span>
+      <span>7</span>
+      <span>8</span>
+    </div>
+    <!-- 右边滑动广告 -->
+    <div class="shine rightShine">
+      <a href=""><img src="img/c37d14e3f47044ea91e367f7ce7287f5.jpg" alt=""></a>
+    </div>
+  </div>
+  <!-- 楼层导航 -->
+  <ul class="comFloorNav floor" id="floorNav">
+    <li>
+      <a href="http://wangzhi/#floor1" class="card active">
+        <div class="front">1F</div>
+        <div class="back">白酒专馆</div>
+      </a>
+    </li>
+    <li>
+      <a href="http://wangzhi/#floor2" class="card">
+        <div class="front">2F</div>
+        <div class="back">葡萄酒馆</div>
+      </a>
+    </li>
+    <li>
+      <a href="http://wangzhi/#floor3" class="card">
+        <div class="front">3F</div>
+        <div class="back">洋酒专馆</div>
+      </a>
+    </li>
+    <li>
+      <a href="http://wangzhi/#floor4" class="card">
+        <div class="front">4F</div>
+        <div class="back">养生酒馆</div>
+      </a>
+    </li>
+    <li>
+      <a href="http://wangzhi/#floor5" class="card">
+        <div class="front">5F</div>
+        <div class="back">高端收藏</div>
+      </a>
+    </li>
+    <li>
+      <a href="http://wangzhi/#floor6" class="card">
+        <div class="front">6F</div>
+        <div class="back">品牌推荐</div>
+      </a>
+    </li>
+    <li>
+      <a href="http://wangzhi/#top" id="goTop">
+        <div class="front">UP</div>
+        <div class="back">返回顶部</div>
+      </a>
+    </li>
+  </ul>
+  <!--右边固定栏 -->
+  <div class="gj-rightFixedBar">
+    <div class="content">
+      <a href="" class="iconBar">
+        <div class="iconfont icon-mine iconBox"></div>
+        <div class="tips rightBar">
+          <span>会员中心</span>
+          <span class="icons iconfont icon-xiangyou"></span>
+        </div>
+      </a>
+      <a href="" class="iconBar">
+        <div class="iconfont icon-gouwuche iconBox">
+          <br>购
+          <br>物
+          <br>车</div>
+      </a>
+      <a href="" class="iconBar">
+        <div class="iconfont icon-youhuiquan iconBox"></div>
+        <div class="tips rightBar">
+          <span>我的优惠券</span>
+          <span class="icons iconfont icon-xiangyou"></span>
+        </div>
+      </a>
+      <a href="" class="iconBar">
+        <div class="iconfont icon-erweima iconBox"></div>
+        <div class="imgs rightBar">
+          <span><img src="./img/qrcode555_06.jpg" alt=""/></span>
+          <span class="icons iconfont icon-xiangyou"></span>
+        </div>
+      </a>
+      <a href="" class="iconBar">
+        <div class="iconfont icon-zan1 iconBox"></div>
+        <div class="imgs whiteWord rightBar">
+          <span><img src="./img/954d509a338a47c09670a8dd919f4735.jpg" alt=""/></span>
+          <span class="icons iconfont icon-xiangyou"></span>
+        </div>
+      </a>
+      </a>
+      <a href="" class="iconBar">
+        <div class="iconfont icon-edit mt70 iconBox"></div>
+        <div class="tips rightBar">
+          <span>用户反馈</span>
+          <span class="icons iconfont icon-xiangyou"></span>
+        </div>
+      </a>
+      <a href="" class="iconBar goTop">
+        <div class="iconfont icon-iconfontfanhui3 iconBox"></div>
+        <div class="tips rightBar">
+          <span>返回顶部</span>
+          <span class="icons iconfont icon-xiangyou"></span>
+        </div>
+      </a>
+    </div>
+  </div>
+  <!--主要部分 -->
+  <div class="gj-mainContent mt10 clearfix">
+    <div class="container">
+      <!-- 特卖会 -->
+      <section class="sale">
+        <div class="shine fl">
+          <a href=""><img src="img/ead931aa04474764b61427ebf05490c3.jpg" alt=""></a>
+        </div>
+        <div class="slideBox fl">
+          <ul class="sliderUl fl">
+            <li>
+              <a href=""><img src="img/0dc24004d77b4e37b2a8bd39b49c7ff1.gif" alt=""></a>
+              <a href=""><img src="img/0dc24004d77b4e37b2a8bd39b49c7ff1.gif" alt=""></a>
+              <a href=""><img src="img/0dc24004d77b4e37b2a8bd39b49c7ff1.gif" alt=""></a>
+              <a href=""><img src="img/0dc24004d77b4e37b2a8bd39b49c7ff1.gif" alt=""></a>
+            </li>
+            <li>
+              <a href=""><img src="img/31a09db8f09b48ae9f70cc2435440186.gif" alt="">
+              </a>
+              <a href=""><img src="img/31a09db8f09b48ae9f70cc2435440186.gif" alt="">
+              </a>
+              <a href=""><img src="img/31a09db8f09b48ae9f70cc2435440186.gif" alt="">
+              </a>
+              <a href=""><img src="img/31a09db8f09b48ae9f70cc2435440186.gif" alt="">
+              </a>
+            </li>
+            <li>
+              <a href=""><img src="img/0dc24004d77b4e37b2a8bd39b49c7ff1.gif" alt=""></a>
+              <a href=""><img src="img/0dc24004d77b4e37b2a8bd39b49c7ff1.gif" alt=""></a>
+              <a href=""><img src="img/0dc24004d77b4e37b2a8bd39b49c7ff1.gif" alt=""></a>
+              <a href=""><img src="img/0dc24004d77b4e37b2a8bd39b49c7ff1.gif" alt=""></a>
+            </li>
+            <li>
+              <a href=""><img src="img/31a09db8f09b48ae9f70cc2435440186.gif" alt="">
+              </a>
+              <a href=""><img src="img/31a09db8f09b48ae9f70cc2435440186.gif" alt="">
+              </a>
+              <a href=""><img src="img/31a09db8f09b48ae9f70cc2435440186.gif" alt="">
+              </a>
+              <a href=""><img src="img/31a09db8f09b48ae9f70cc2435440186.gif" alt="">
+              </a>
+            </li>
+          </ul>
+          <div class="slider-ctrl">
+            <span class="slider-ctrl-prev gjw-myBtn"> < </span>
+            <span class="slider-ctrl-next gjw-myBtn"> > </span>
+          </div>
+        </div>
+      </section>
+      <!-- 购酒闪购 -->
+      <section class="flashSalesContent clearfix imgLazy">
+        <div>
+          <div class="flashSales fl al">
+            <div class="title">
+              <span class="fs16 fw lh24">购酒闪购&nbsp;|</span>
+              <span>&nbsp;每天10点/15点更新</span>
+            </div>
+            <div class="imgBox fl ball  pl10">
+              <ul>
+                <li>
+                  <div class="imgs">
+                    <a href="">
+                      <img src="img/2aec49b3e56b41eba96e2f520472a23c_1.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="detail border-r">
+                    <a href="">名仕之风 XO 白兰地 500ml</a>
+                    <P class="redWord fw fs16">&yen;1777</P>
+                    <div class="leftTime">
+                      <span class="fl leftTime_txt">剩余:</span>
+                      <div class="gjw_cd fl" data-time="1104046">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="imgs">
+                    <a href="">
+                      <img src="img/2aec49b3e56b41eba96e2f520472a23c_1.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="detail border-r pl10">
+                    <a href="">名仕之风 XO 白兰地 500ml</a>
+                    <P class="redWord fw fs16">&yen;1777</P>
+                    <div class="leftTime">
+                      <span class="fl leftTime_txt">剩余:</span>
+                      <div class="gjw_cd fl" data-time="1104046">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="imgs">
+                    <a href="">
+                      <img src="img/2aec49b3e56b41eba96e2f520472a23c_1.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="detail border-r pl10">
+                    <a href="">名仕之风 XO 白兰地 500ml</a>
+                    <P class="redWord fw fs16">&yen;1777</P>
+                    <div class="leftTime">
+                      <span class="fl leftTime_txt">剩余:</span>
+                      <div class="gjw_cd fl" data-time="1104046">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="imgs">
+                    <a href="">
+                      <img src="img/2aec49b3e56b41eba96e2f520472a23c_1.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="detail border-r pl10">
+                    <a href="">名仕之风 XO 白兰地 500ml</a>
+                    <P class="redWord fw fs16">&yen;1777</P>
+                    <div class="leftTime">
+                      <span class="fl leftTime_txt">剩余:</span>
+                      <div class="gjw_cd fl" data-time="1104046">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="imgs">
+                    <a href="">
+                      <img src="img/2aec49b3e56b41eba96e2f520472a23c_1.jpg" alt="">
+                    </a>
+                  </div>
+                  <div class="detail border-r pl10">
+                    <a href="">名仕之风 XO 白兰地 500ml</a>
+                    <P class="redWord fw fs16">&yen;1777</P>
+                    <div class="leftTime">
+                      <span class="fl leftTime_txt">剩余:</span>
+                      <div class="gjw_cd fl" data-time="1104046">
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flashNews fr al">
+            <div class="title">
+              <span class="fs16 fw">购酒快讯&nbsp;|</span>
+              <a>&nbsp;更多</a>
+            </div>
+            <div class="newsBox ball p10 bs">
+              <ul>
+                <li><a href="">【公告】购酒网2016年春节放假通知</a></li>
+                <li><a href="">【公告】春节假期特别公告</a></li>
+                <li><a href="">【公告】425ml的爱</a></li>
+                <li><a href="">【公告】购酒网2016年春节放假通知</a></li>
+                <li><a href="">【公告】购酒网2016年春节放假通知</a></li>
+              </ul>
+              <img src="img/d1170b2742494b358f833ceba4ce59e8.jpg" class="mt10" alt="">
+            </div>
+          </div>
+        </div>
+        <!-- 购酒闪购 -->
+        <script type="text/javascript">
+        $('.gjw_cd').timer({
+          day: true,
+          fnSucc: function() {
+            $(this).closest('.leftTime').html('时间到');
+
+            //时间到后的回调放这里
+          }
+        });
+        </script>
+      </section>
+      <!-- 三图通栏banner -->
+      <section class="threeBanner clearfix mt20 imgLazy">
+        <a href=""><img src="img/523d7931c94a4b05a2e6ce419608b38f.jpg" alt=""></a>
+        <a href=""><img src="img/523d7931c94a4b05a2e6ce419608b38f.jpg" alt=""></a>
+        <a href=""><img src="img/523d7931c94a4b05a2e6ce419608b38f.jpg" alt=""></a>
+      </section>
+      <!-- 购酒推荐 -->
+      <section class="recommend clearfix mt20 imgLazy">
+        <div class="title al">
+          <span class="fs16 fw lh24">购酒推荐&nbsp;|</span>
+          <span>&nbsp;限时特惠</span>
+        </div>
+        <div class="content b-all">
+          <div class="adsLeft shine fl">
+            <a href=""><img src="img/946c78a21da943249f54368ecf0f849d.jpg" alt=""></a>
+          </div>
+          <div class="adsMain fl">
+            <ul>
+              <li class="fl">
+                <a class="" href="">
+                  <h2 class="fw">独具风味 佳酿美酒</h2>
+                  <p>52度 茅台集团 国隆</p>
+                  <p class="price fw lh16">158元</p>
+                  <p><img src="img/8c32825f8cc74d1798513658f174543f_1.jpg" alt="" /></p>
+                </a>
+              </li>
+              <li class="fl">
+                <a class="" href="">
+                  <h2 class="fw">独具风味 佳酿美酒</h2>
+                  <p>52度 茅台集团 国隆</p>
+                  <p class="price fw lh16">158元</p>
+                  <p><img src="img/8c32825f8cc74d1798513658f174543f_1.jpg" alt="" /></p>
+                </a>
+              </li>
+              <li class="fl">
+                <a class="" href="">
+                  <h2 class="fw">独具风味 佳酿美酒</h2>
+                  <p>52度 茅台集团 国隆</p>
+                  <p class="price fw lh16">158元</p>
+                  <p><img src="img/8c32825f8cc74d1798513658f174543f_1.jpg" alt="" /></p>
+                </a>
+              </li>
+              <li class="fl">
+                <a class="" href="">
+                  <h2 class="fw">独具风味 佳酿美酒</h2>
+                  <p>52度 茅台集团 国隆</p>
+                  <p class="price fw lh16">158元</p>
+                  <p><img src="img/8c32825f8cc74d1798513658f174543f_1.jpg" alt="" /></p>
+                </a>
+              </li>
+              <li class="fl">
+                <a class="" href="">
+                  <h2 class="fw">独具风味 佳酿美酒</h2>
+                  <p>52度 茅台集团 国隆</p>
+                  <p class="price fw lh16">158元</p>
+                  <p><img src="img/8c32825f8cc74d1798513658f174543f_1.jpg" alt="" /></p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="adsRight shine fr">
+            <a href=""><img src="img/946c78a21da943249f54368ecf0f849d.jpg" alt=""></a>
+          </div>
+        </div>
+      </section>
+      <!-- 1楼 -->
+      <section class="floor1 floor clearfix imgLazy mt20" id="floor1">
+        <div class="title al">
+          <h2 class="fl"><span class="floorName ac fs12 whiteWord">1F</span>白酒馆</h2>
+          <div class="tab fr">
+            <ul class="tabTit">
+              <li class="tabTitCell active"><a href="">大牌白酒</a></li>
+              <li class="tabTitCell"><a href="">茅台系列</a><span>&nbsp;|</span></li>
+              <li class="tabTitCell"><a href="">五粮液系列</a><span>&nbsp;|</span></li>
+              <li class="tabTitCell"><a href="">精装礼盒</a><span>&nbsp;|</span></li>
+              <li class="tabTitCell"><a href="">整箱优惠</a><span>&nbsp;|</span></li>
+              <li class="tabTitCell"><a href="">小酒版年份老酒</a><span>&nbsp;|</span></li>
+              <li><a href="">更多</a><span>&nbsp;|</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="content">
+          <div class="tabSide fl">
+            <p>
+              <a href="" class="shine"><img src="img/5245c5b6fb0c4edeaaab69b84911323a.jpg" alt=""></a>
+            </p>
+            <ul class="sideNav">
+              <li><a href="">五粮液</a></li>
+              <li><a href="">高端收藏</a></li>
+              <li><a href="">茅台专场</a></li>
+              <li><a href="">小酒迷情</a></li>
+              <li><a href="">陈年老酒</a></li>
+              <li><a href="">每周特卖</a></li>
+              <li><a href="">郎酒专场</a></li>
+              <li><a href="">清仓专区</a></li>
+            </ul>
+            <p>
+              <a href="" class="shine"><img src="img/613f074e2936455f8c580fa6a97b1dab.jpg" alt=""></a>
+            </p>
+            <p>
+              <a href="" class="shine"><img src="img/d0e935d591a14892ba56ed69e2fadb84.jpg" alt=""></a>
+            </p>
+          </div>
+          <div class="tabPanel fl">
+            <!-- 楼层1 tab栏第1屏 -->
+            <div class="tabBox">
+              <ul>
+                <li class="carousel">
+                  <div class="imgs">
+                    <a href="">
+                      <img src="img/dc04863c556b4b66bad21897dbbcb8d0.jpg" class="notLazy" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/7598208760f94e97a288bda9295aa7d0.jpg" class="notLazy" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/aa05e03a861b4034b0f28ab44f8ba12f.jpg" class="notLazy" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/dc04863c556b4b66bad21897dbbcb8d0.jpg" class="notLazy" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/7598208760f94e97a288bda9295aa7d0.jpg" class="notLazy" alt="">
+                    </a>
+                  </div>
+                </li>
+                <li class="pointBox">
+                  <div class="slider-ctrl">
+                    <span class="slider-ctrl-prev gjw-myBtn"> < </span>
+                    <span class="slider-ctrl-next gjw-myBtn"> > </span>
+                  </div>
+                  <div class="point">
+                    <span class="now"></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第2屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第3屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第4屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第5屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第6屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 2楼 -->
+      <section class="floor2 floor clearfix mt20 imgLazy" id="floor2">
+        <div class="title al">
+          <h2 class="fl"><span class="floorName ac fs12 whiteWord">2F</span>葡萄酒馆</h2>
+          <div class="tab fr">
+            <ul class="tabTit">
+              <li class="tabTitCell active"><a href="">大牌白酒</a></li>
+              <li class="tabTitCell"><a href="">茅台系列</a><span>&nbsp;|</span></li>
+              <li class="tabTitCell"><a href="">五粮液系列</a><span>&nbsp;|</span></li>
+              <li class="tabTitCell"><a href="">精装礼盒</a><span>&nbsp;|</span></li>
+              <li class="tabTitCell"><a href="">整箱优惠</a><span>&nbsp;|</span></li>
+              <li class="tabTitCell"><a href="">小酒版年份老酒</a><span>&nbsp;|</span></li>
+              <li><a href="">更多</a><span>&nbsp;|</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="content">
+          <div class="tabSide fl">
+            <p>
+              <a href="" class="shine"><img src="img/5245c5b6fb0c4edeaaab69b84911323a.jpg" alt=""></a>
+            </p>
+            <ul class="sideNav">
+              <li><a href="">五粮液</a></li>
+              <li><a href="">高端收藏</a></li>
+              <li><a href="">茅台专场</a></li>
+              <li><a href="">小酒迷情</a></li>
+              <li><a href="">陈年老酒</a></li>
+              <li><a href="">每周特卖</a></li>
+              <li><a href="">郎酒专场</a></li>
+              <li><a href="">清仓专区</a></li>
+            </ul>
+            <p>
+              <a href="" class="shine"><img src="img/613f074e2936455f8c580fa6a97b1dab.jpg" alt=""></a>
+            </p>
+            <p>
+              <a href="" class="shine"><img src="img/d0e935d591a14892ba56ed69e2fadb84.jpg" alt=""></a>
+            </p>
+          </div>
+          <div class="tabPanel fl">
+            <!-- 楼层1 tab栏第1屏 -->
+            <div class="tabBox">
+              <ul class="imgLazy">
+                <li class="carousel">
+                  <div class="imgs">
+                    <a href="">
+                      <img src="img/dc04863c556b4b66bad21897dbbcb8d0.jpg" class="notLazy" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/7598208760f94e97a288bda9295aa7d0.jpg" class="notLazy" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/aa05e03a861b4034b0f28ab44f8ba12f.jpg" class="notLazy" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/dc04863c556b4b66bad21897dbbcb8d0.jpg" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/7598208760f94e97a288bda9295aa7d0.jpg" class="notLazy" alt="">
+                    </a>
+                  </div>
+                </li>
+                <li class="pointBox">
+                  <div class="slider-ctrl">
+                    <span class="slider-ctrl-prev gjw-myBtn"> < </span>
+                    <span class="slider-ctrl-next gjw-myBtn"> > </span>
+                  </div>
+                  <div class="point">
+                    <span class="now"></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第2屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第3屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第4屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第5屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第6屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 3楼 -->
+      <section class="floor3 floor clearfix mt20 imgLazy" id="floor3">
+        <div class="title al">
+          <h2 class="fl"><span class="floorName ac fs12 whiteWord">3F</span>洋酒专场</h2>
+          <div class="tab fr">
+            <ul class="tabTit">
+              <li class="tabTitCell active"><a href="">大牌白酒</a></li>
+              <li class="tabTitCell"><a href="">茅台系列</a><span>&nbsp;|</span></li>
+              <li class="tabTitCell"><a href="">五粮液系列</a><span>&nbsp;|</span></li>
+              <li class="tabTitCell"><a href="">精装礼盒</a><span>&nbsp;|</span></li>
+              <li class="tabTitCell"><a href="">整箱优惠</a><span>&nbsp;|</span></li>
+              <li class="tabTitCell"><a href="">小酒版年份老酒</a><span>&nbsp;|</span></li>
+              <li><a href="">更多</a><span>&nbsp;|</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="content">
+          <div class="tabSide fl">
+            <p>
+              <a href="" class="shine"><img src="img/5245c5b6fb0c4edeaaab69b84911323a.jpg" alt=""></a>
+            </p>
+            <ul class="sideNav">
+              <li><a href="">五粮液</a></li>
+              <li><a href="">高端收藏</a></li>
+              <li><a href="">茅台专场</a></li>
+              <li><a href="">小酒迷情</a></li>
+              <li><a href="">陈年老酒</a></li>
+              <li><a href="">每周特卖</a></li>
+              <li><a href="">郎酒专场</a></li>
+              <li><a href="">清仓专区</a></li>
+            </ul>
+            <p>
+              <a href="" class="shine"><img src="img/613f074e2936455f8c580fa6a97b1dab.jpg" alt=""></a>
+            </p>
+            <p>
+              <a href="" class="shine"><img src="img/d0e935d591a14892ba56ed69e2fadb84.jpg" alt=""></a>
+            </p>
+          </div>
+          <div class="tabPanel fl">
+            <!-- 楼层1 tab栏第1屏 -->
+            <div class="tabBox">
+              <ul class="imgLazy">
+                <li class="carousel">
+                  <div class="imgs">
+                    <a href="">
+                      <img src="img/dc04863c556b4b66bad21897dbbcb8d0.jpg" class="notLazy" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/7598208760f94e97a288bda9295aa7d0.jpg" class="notLazy" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/aa05e03a861b4034b0f28ab44f8ba12f.jpg" class="notLazy" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/dc04863c556b4b66bad21897dbbcb8d0.jpg" class="notLazy" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/7598208760f94e97a288bda9295aa7d0.jpg" class="notLazy" alt="">
+                    </a>
+                  </div>
+                </li>
+                <li class="pointBox">
+                  <div class="slider-ctrl">
+                    <span class="slider-ctrl-prev gjw-myBtn"> < </span>
+                    <span class="slider-ctrl-next gjw-myBtn"> > </span>
+                  </div>
+                  <div class="point">
+                    <span class="now"></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第2屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第3屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第4屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第5屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第6屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 4楼 -->
+      <section class="floor4 floor clearfix mt20 imgLazy" id="floor4">
+        <div class="title al">
+          <h2 class="fl"><span class="floorName ac fs12 whiteWord">4F</span>养生专场</h2>
+          <div class="tab fr">
+            <ul class="tabTit">
+              <li class="tabTitCell active"><a href="">大牌白酒</a></li>
+              <li class="tabTitCell"><a href="">茅台系列</a><span>&nbsp;|</span></li>
+              <li class="tabTitCell"><a href="">五粮液系列</a><span>&nbsp;|</span></li>
+              <li class="tabTitCell"><a href="">精装礼盒</a><span>&nbsp;|</span></li>
+              <li class="tabTitCell"><a href="">整箱优惠</a><span>&nbsp;|</span></li>
+              <li class="tabTitCell"><a href="">小酒版年份老酒</a><span>&nbsp;|</span></li>
+              <li><a href="">更多</a><span>&nbsp;|</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="content">
+          <div class="tabSide fl">
+            <p>
+              <a href="" class="shine"><img src="img/5245c5b6fb0c4edeaaab69b84911323a.jpg" alt=""></a>
+            </p>
+            <ul class="sideNav">
+              <li><a href="">五粮液</a></li>
+              <li><a href="">高端收藏</a></li>
+              <li><a href="">茅台专场</a></li>
+              <li><a href="">小酒迷情</a></li>
+              <li><a href="">陈年老酒</a></li>
+              <li><a href="">每周特卖</a></li>
+              <li><a href="">郎酒专场</a></li>
+              <li><a href="">清仓专区</a></li>
+            </ul>
+            <p>
+              <a href="" class="shine"><img src="img/613f074e2936455f8c580fa6a97b1dab.jpg" alt=""></a>
+            </p>
+            <p>
+              <a href="" class="shine"><img src="img/d0e935d591a14892ba56ed69e2fadb84.jpg" alt=""></a>
+            </p>
+          </div>
+          <div class="tabPanel fl">
+            <!-- 楼层1 tab栏第1屏 -->
+            <div class="tabBox">
+              <ul>
+                <li class="carousel">
+                  <div class="imgs">
+                    <a href="">
+                      <img src="img/dc04863c556b4b66bad21897dbbcb8d0.jpg" class="notLazy" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/7598208760f94e97a288bda9295aa7d0.jpg" class="notLazy" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/aa05e03a861b4034b0f28ab44f8ba12f.jpg" class="notLazy" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/dc04863c556b4b66bad21897dbbcb8d0.jpg" class="notLazy" alt="">
+                    </a>
+                    <a href="">
+                      <img src="img/7598208760f94e97a288bda9295aa7d0.jpg" class="notLazy" alt="">
+                    </a>
+                  </div>
+                </li>
+                <li class="pointBox">
+                  <div class="slider-ctrl">
+                    <span class="slider-ctrl-prev gjw-myBtn"> < </span>
+                    <span class="slider-ctrl-next gjw-myBtn"> > </span>
+                  </div>
+                  <div class="point">
+                    <span class="now"></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/11ed6f68886a41088e3e954a7e9494dd_1.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第2屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/29786d209a7649978d278cec78830b6c.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第3屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/63e85145d557448695bed1e4d230e021.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第4屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/037d0b4137de49318ab8a3e9c98469ac.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第5屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/c11a4bcbcf4e40bb857ea64afec9e949.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+              <!-- 楼层1 tab栏第6屏 -->
+              <ul>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="imgs">
+                    <img src="img/8b2aaf130b5c4dad9b310947c58848e5.jpg" alt="">
+                    <p href="">38度茅台五星（2011年）500ml</p>
+                    <P class="redWord fs16">&yen;599</P>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 5楼 -->
+      <section class="floor5 floor clearfix mt20 imgLazy" id="floor5">
+        <div class="title al">
+          <h2><span class="floorName ac fs12 whiteWord">5F</span>高端收藏</h2>
+        </div>
+        <div class="content">
+          <div class="gj-top fl">
+            <a href="" class="fl"><img src="img/b00bb0174b174482877bc934303ff79f.jpg" alt=""></a>
+            <a href="" class="fl pt20 pl5"><img src="img/e0b90ba0dfd241f29a32a66af617d929.jpg" alt=""></a>
+            <a href="" class="fl pt20 pl5"><img src="img/e0b90ba0dfd241f29a32a66af617d929.jpg" alt=""></a>
+            <a href="" class="fl pt20 pl5"><img src="img/e0b90ba0dfd241f29a32a66af617d929.jpg" alt=""></a>
+            <a href="" class="fl pt20 pl5"><img src="img/e0b90ba0dfd241f29a32a66af617d929.jpg" alt=""></a>
+          </div>
+          <div class="threeBanner fl mt20">
+            <a href=""><img src="img/53c5b2169369476ab6c0161eac3c5172.jpg" alt=""></a>
+            <a href=""><img src="img/53c5b2169369476ab6c0161eac3c5172.jpg" alt=""></a>
+            <a href=""><img src="img/53c5b2169369476ab6c0161eac3c5172.jpg" alt=""></a>
+          </div>
+        </div>
+      </section>
+      <!-- 6楼 -->
+      <section class="floor6 floor clearfix mt20 imgLazy" id="floor6">
+        <div class="title al">
+          <h2><span class="floorName ac fs12 whiteWord">6F</span>品牌馆</h2>
+        </div>
+        <div class="content">
+          <div class="brandBox fl">
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+            <a href=""><img src="img/7af0a53d2320469fa4346c792810e35b.jpg" alt=""></a>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- 底部通栏 -->
+  <div class="gj-footerMsg clearfix mt20">
+    <div class="container whiteWord">
+      <div class="msg">
+        <div class="tel fl">
+          <a href=""><img src="img/onlineServ.png" alt=""></a>
+        </div>
+        <div class="dress fr mt5">
+          <p class="fl ar mr10 mt10 lh16">
+            超万平方米仓储体验店
+            <br> 上海松江区茂盛路202弄18号
+            <br> 客服邮箱：kf@goujiuwang.com
+            <br>
+            <strong>扫描二维码，掌握一手优惠资讯</strong>
+            <br>
+          </p>
+          <img src="img/qrcode_06.jpg" alt="">
+        </div>
+      </div>
+      <div class="service">
+        <dl>
+          <dt>新手指南</dt>
+          <dd><a href="">用户协议</a></dd>
+          <dd><a href="">常见问题</a></dd>
+          <dd><a href="">网站购物流程</a></dd>
+          <dd><a href="">会员制度</a></dd>
+          <dd><a href="">购酒币使用说明</a></dd>
+        </dl>
+        <dl>
+          <dt>如何付款</dt>
+          <dd><a href="">如何付款</a></dd>
+          <dd><a href="">发票制度说明</a></dd>
+          <dd><a href="">电子券说明</a></dd>
+          <dd><a href="">虚拟账户支付</a></dd>
+          <dd><a href="">商品优惠代码说明</a></dd>
+        </dl>
+        <dl>
+          <dt>配送方式</dt>
+          <dd><a href="">配送收费标准</a></dd>
+          <dd><a href="">配送时间</a></dd>
+          <dd><a href="">货到付款支持城市</a></dd>
+          <dd><a href="">实体加盟服务商</a></dd>
+        </dl>
+        <dl>
+          <dt>售后服务</dt>
+          <dd><a href="">如何办理退换货</a></dd>
+          <dd><a href="">如何退换货</a></dd>
+          <dd><a href="">联系客服</a></dd>
+        </dl>
+        <dl>
+          <dt>关于我们</dt>
+          <dd><a href="">了解购酒网</a></dd>
+          <dd><a href="">招兵买马</a></dd>
+          <dd><a href="">联系我们</a></dd>
+          <dd><a href="">隐私声明</a></dd>
+          <dd><a href="">友情链接</a></dd>
+        </dl>
+        <dl class="cooperation">
+          <dt>合作共赢</dt>
+          <dd><a href="">品牌馆</a></dd>
+          <dd><a href="">大客户采购 new</a></dd>
+          <dd><a href="">网站推广 new</a></dd>
+          <dd><a href="">供应商供货 new</a></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+  <!-- 友情链接和备案 -->
+  <div class="gj-copyRight">
+    <div class="container copyRight">
+      <div class="friendLink">
+        <ul class="friendLinkBox">
+          <li>
+            <a href="">友情链接：</a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href="">更多</a>
+          </li>
+          <li>
+            <a href="">友情链接：</a><span> | </span>
+            <a href=""> 嗯嗯嗯嗯 </a><span> | </span>
+            <a href=""> 嗯嗯嗯 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href="">更多</a>
+          </li>
+          <li>
+            <a href="">友情链接：</a><span> | </span>
+            <a href=""> 呜呜呜呜 </a><span> | </span>
+            <a href=""> 呜呜呜 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href="">更多</a>
+          </li>
+          <li>
+            <a href="">友情链接：</a><span> | </span>
+            <a href=""> 呵呵呵呵 </a><span> | </span>
+            <a href=""> 呵呵呵 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href="">更多</a>
+          </li>
+          <li>
+            <a href="">友情链接：</a><span> | </span>
+            <a href=""> 嘻嘻嘻嘻 </a><span> | </span>
+            <a href=""> 嘻嘻嘻 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href="">更多</a>
+          </li>
+          <li>
+            <a href="">友情链接：</a><span> | </span>
+            <a href=""> 哈哈哈哈 </a><span> | </span>
+            <a href=""> 哈哈哈 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href="">更多</a>
+          </li>
+          <li>
+            <a href="">友情链接：</a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href=""> 白酒招商 </a><span> | </span>
+            <a href="">更多</a>
+          </li>
+        </ul>
+      </div>
+      <div class="authority ">
+        <p class="mt10 mb10">Copyright® 2009-2015 gjw.com, All Rights Reserved 上海购酒网电子商务有限公司 版权所有</p>
+        <a href="" class="record"></a>
+        <a href="" class="depart"></a>
+      </div>
+    </div>
+  </div>
+  <script src='./js/index.js'></script>
+  <script src='./js/header.js'></script>
+  <script src='./js/footer.js'></script>
+  <script src='./js/compents.js.js'></script>
+</body>
+
+</html>

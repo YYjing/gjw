@@ -1,0 +1,5 @@
+.gjw_cd{ display:inline-block;overflow:hidden; height:24px; line-height: 24px; z-index: 9; color: #666;}
+.gjw_cd span{ display: block;}
+.gjw_cd div{ float:left; position: relative;width:16px;height:24px;line-height: 24px;overflow: hidden; }
+.gjw_cd div .box{ position: absolute; left: 0 ; top: 0; z-index: 2;height:48px;}
+.gjw_cd .cd_animate{ transition: 0.4s; -webkit-transition: 0.4s;}

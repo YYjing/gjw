@@ -1,0 +1,77 @@
+/*
+* @Author: Administrator
+* @Date:   2016-02-01 20:34:52
+* @Last Modified by:   Administrator
+* @Last Modified time: 2016-02-02 20:34:45
+*/
+/*底部客服热线*/
+.gj-footerMsg{
+  height: 343px;
+  background-color: #404040;
+}
+.gj-footerMsg .msg{
+  height: 113px;
+  border-bottom: 2px solid #787878;
+}
+.gj-footerMsg .msg .tel{
+  height: 100%;
+  width: 70%;
+  background: url(../img/tel.png) no-repeat left center;
+}
+.gj-footerMsg .msg .tel img{
+  margin-top: 60px;
+}
+.gj-footerMsg .msg .dress img{
+  float: right;
+  width: 104px;
+  height: 104px;
+}
+/*底部服务区*/
+.gj-footerMsg .service dl{
+  margin: 40px 0 0 100px;
+  text-align: left;
+  float: left;
+}
+.gj-footerMsg .service dl dt{
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 40px;
+}
+.gj-footerMsg .service dl dd a{
+  color: #aaa;
+  line-height: 25px;
+}
+.gj-footerMsg .service dl:last-child dd a{
+  color: #FFFF00;
+}
+/*友情链接和备案*/
+.gj-copyRight .copyRight{
+  position: relative;
+  background: url(../img/baozheng_06.jpg) no-repeat;
+  padding-top: 85px;
+}
+.gj-copyRight .friendLink{
+  position: relative;
+  overflow: hidden;
+  height: 25px;
+}
+.gj-copyRight .friendLink .friendLinkBox {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.gj-copyRight .friendLink li a{
+  line-height: 25px;
+}
+.gj-copyRight .authority .record {
+  display: inline-block;
+  height: 48px;
+  width: 110px;
+  background: url(../img/aut_06.jpg) no-repeat left center;
+}
+.gj-copyRight .authority .depart {
+  display: inline-block;
+  height: 48px;
+  width: 110px;
+  background: url(../img/aut_06.jpg) no-repeat right center;
+}
